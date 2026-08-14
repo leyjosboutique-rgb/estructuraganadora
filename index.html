@@ -1,835 +1,343 @@
-<!DOCTYPE html>
-<html lang="es" style="scroll-behavior: smooth;">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Master en Muebles con Compartimentos Secretos</title>
-</head>
-<body style="margin:0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5f1f39" />
+    <meta
+      name="description"
+      content="Bolsos de Autor™: más de 80 patrones premium de crochet para crear piezas con apariencia de boutique."
+    />
+    <meta property="og:title" content="Bolsos de Autor™" />
+    <meta
+      property="og:description"
+      content="Más de 80 patrones premium para tejer bolsos modernos, firmes y con acabados de boutique."
+    />
+    <meta property="og:type" content="website" />
+    <title>Bolsos de Autor™ | Patrones premium de crochet</title>
 
-<!-- ============================================= -->
-<!-- 1. SECCIÓN PROMESA (HERO) -->
-<!-- ============================================= -->
-<style>
-.hidden-furniture-hero-v2 {
-  width: 100%;
-  padding: 18px 14px 34px;
-  background: linear-gradient(rgba(248, 244, 236, 0.92), rgba(248, 244, 236, 0.92)), url("https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1200&q=80");
-  background-size: cover;
-  background-position: center;
-}
-.hidden-furniture-hero-v2__wrap {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-}
-.hidden-furniture-hero-v2__headline {
-  margin: 0 0 16px;
-  color: #1f1f1f;
-  font-size: 34px;
-  line-height: 1.15;
-  font-weight: 900;
-  letter-spacing: -0.6px;
-}
-.hidden-furniture-hero-v2__headline .accent {
-  color: #d96f17;
-}
-.hidden-furniture-hero-v2__image-box {
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 1 / 1;
-  margin: 0 auto 20px;
-  border: 4px solid #ffffff;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-  border-radius: 6px;
-  overflow: hidden;
-  background: #e9dfd0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hidden-furniture-hero-v2__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.hidden-furniture-hero-v2__subheadline {
-  max-width: 690px;
-  margin: 0 auto 18px;
-  font-size: 18px;
-  line-height: 1.55;
-  color: #3f3a34;
-  font-weight: 500;
-}
-.hidden-furniture-hero-v2__proof {
-  font-size: 14px;
-  line-height: 1.45;
-  color: #4f493f;
-  font-weight: 700;
-}
-.hidden-furniture-hero-v2__stars {
-  color: #f2b01e;
-  font-size: 18px;
-  letter-spacing: 2px;
-  margin-bottom: 4px;
-}
-.hidden-furniture-hero-v2__rating {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  color: #3f3a34;
-  margin-top: 2px;
-}
-@media screen and (max-width: 768px) {
-  .hidden-furniture-hero-v2 { padding: 14px 12px 28px; }
-  .hidden-furniture-hero-v2__headline { font-size: 27px; line-height: 1.16; margin-bottom: 14px; }
-  .hidden-furniture-hero-v2__image-box { max-width: 320px; margin-bottom: 16px; }
-  .hidden-furniture-hero-v2__subheadline { font-size: 16px; line-height: 1.5; margin-bottom: 16px; }
-  .hidden-furniture-hero-v2__proof { font-size: 13px; }
-}
-</style>
+    <script>document.documentElement.classList.add("js");</script>
 
-<section class="hidden-furniture-hero-v2">
-  <div class="hidden-furniture-hero-v2__wrap">
-    <h1 class="hidden-furniture-hero-v2__headline">
-      Descarga los planos de <span class="accent">MUEBLES CON COMPARTIMENTOS SECRETOS</span><br>
-      y comienza a fabricar este mismo fin de semana piezas premium que se venden solas...
-    </h1>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-    <p style="display:inline-block;background:#fff3e8;border:2px solid #e7b07a;color:#d96f17;font-weight:800;font-size:20px;padding:12px 22px;border-radius:12px;margin:0 auto 18px;">
-      ...A un precio de hasta 3 veces más
-    </p>
-
-    <p class="hidden-furniture-hero-v2__subheadline">
-      Incluso si nunca has trabajado la madera y nadie conoce todavía tu trabajo.
-    </p>
-
-    <div class="hidden-furniture-hero-v2__image-box">
-      <img
-        class="hidden-furniture-hero-v2__image"
-        src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/mockup_libros_muebles_premium_menos_50kb.webp?v=1776101084"
-        alt="Mockup de planos para fabricar muebles con compartimentos ocultos"
-      >
-    </div>
-
-    <p class="hidden-furniture-hero-v2__subheadline">
-      Acceso inmediato a planos simples, materiales fáciles de conseguir, listas de corte completas y un sistema paso a paso para fabricar muebles únicos, seguros, funcionales y duraderos que atraen clientes y se venden solos.
-    </p>
-
-    <div class="hidden-furniture-hero-v2__proof">
-      <div class="hidden-furniture-hero-v2__stars">★★★★★</div>
-      <span class="hidden-furniture-hero-v2__rating">4.9/5.0 · +1,256 clientes satisfechos</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================= -->
-<!-- 2. SECCIÓN TESTIMONIOS -->
-<!-- ============================================= -->
-<style>
-  .hf-testimonial-carousel { width: 100%; padding: 46px 16px; background: #f8f4ec; }
-  .hf-testimonial-carousel__wrap { max-width: 1100px; margin: 0 auto; text-align: center; }
-  .hf-testimonial-carousel__title { margin: 0 0 12px; color: #1f1f1f; font-size: 32px; line-height: 1.15; font-weight: 900; letter-spacing: -0.5px; }
-  .hf-testimonial-carousel__title .accent { color: #d96f17; }
-  .hf-testimonial-carousel__subtitle { max-width: 760px; margin: 0 auto 26px; color: #4a433b; font-size: 17px; line-height: 1.6; font-weight: 500; }
-  .hf-testimonial-carousel__track { display: grid; grid-auto-flow: column; grid-auto-columns: calc(33.333% - 14px); gap: 20px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; padding: 4px 2px 10px; }
-  .hf-testimonial-carousel__track::-webkit-scrollbar { display: none; }
-  .hf-testimonial-carousel__card { background: #fffdf9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 28px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06); text-align: left; display: flex; flex-direction: column; height: 100%; }
-  .hf-testimonial-carousel__image { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
-  .hf-testimonial-carousel__content { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
-  .hf-testimonial-carousel__stars { color: #f2b01e; font-size: 18px; letter-spacing: 2px; line-height: 1; }
-  .hf-testimonial-carousel__name { margin: 0; color: #1f1f1f; font-size: 17px; line-height: 1.2; font-weight: 800; }
-  .hf-testimonial-carousel__role { margin: -4px 0 0; color: #756d64; font-size: 13px; line-height: 1.4; font-weight: 600; }
-  .hf-testimonial-carousel__text { color: #2d2a27; font-size: 15px; line-height: 1.65; font-weight: 500; }
-  .hf-testimonial-carousel__highlight { background: #fff2dd; color: #8c4a0b; font-weight: 800; padding: 1px 5px; border-radius: 3px; }
-  .hf-testimonial-carousel__nav { display: flex; justify-content: center; gap: 12px; margin-top: 20px; }
-  .hf-testimonial-carousel__btn { border: none; background: #d97b1e; color: #ffffff; width: 46px; height: 46px; border-radius: 999px; font-size: 20px; font-weight: 800; cursor: pointer; box-shadow: 0 8px 18px rgba(217, 123, 30, 0.28); }
-  @media screen and (max-width: 990px) { .hf-testimonial-carousel__track { grid-auto-columns: calc(50% - 10px); } }
-  @media screen and (max-width: 768px) {
-    .hf-testimonial-carousel { padding: 36px 12px; }
-    .hf-testimonial-carousel__title { font-size: 26px; }
-    .hf-testimonial-carousel__subtitle { font-size: 15px; }
-    .hf-testimonial-carousel__track { grid-auto-columns: 85%; gap: 14px; }
-    .hf-testimonial-carousel__content { padding: 14px; }
-    .hf-testimonial-carousel__name { font-size: 16px; }
-    .hf-testimonial-carousel__role { font-size: 12px; }
-    .hf-testimonial-carousel__text { font-size: 14px; line-height: 1.6; }
-    .hf-testimonial-carousel__btn { width: 42px; height: 42px; font-size: 18px; }
-  }
-</style>
-
-<section class="hf-testimonial-carousel">
-  <div class="hf-testimonial-carousel__wrap">
-    <h2 class="hf-testimonial-carousel__title">
-      Mira lo que están generando <span class="accent">personas comunes con estos muebles con compartimento secreto</span>
-    </h2>
-
-    <div class="hf-testimonial-carousel__track" id="hfTestimonialTrack">
-
-      <article class="hf-testimonial-carousel__card">
-        <img class="hf-testimonial-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/testimonio_comprimida_6_30kb.webp?v=1776128477" alt="Testimonio de Laura M.">
-        <div class="hf-testimonial-carousel__content">
-          <div class="hf-testimonial-carousel__stars">★★★★★</div>
-          <h3 class="hf-testimonial-carousel__name">Laura M.</h3>
-          <p class="hf-testimonial-carousel__role">Ama de casa</p>
-          <div class="hf-testimonial-carousel__text">"Vendí mi primer mueble con compartimento oculto en <span class="hf-testimonial-carousel__highlight">USD 1,100</span> cuando antes cobraba USD 350 por uno parecido. El cliente no dudó con el precio, solo me preguntó si podía hacerle otro igual para un regalo."</div>
-        </div>
-      </article>
-
-      <article class="hf-testimonial-carousel__card">
-        <img class="hf-testimonial-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/testimonio_comprimida_3_30kb.webp?v=1776128477" alt="Testimonio de Camila R.">
-        <div class="hf-testimonial-carousel__content">
-          <div class="hf-testimonial-carousel__stars">★★★★★</div>
-          <h3 class="hf-testimonial-carousel__name">Camila R.</h3>
-          <p class="hf-testimonial-carousel__role">Ama de casa</p>
-          <div class="hf-testimonial-carousel__text">"Recuperé lo que pagué por los planos con la primera venta. Hice una repisa flotante con compartimento oculto y la vendí en <span class="hf-testimonial-carousel__highlight">USD 750</span> el mismo fin de semana que la publiqué en Marketplace."</div>
-        </div>
-      </article>
-
-      <article class="hf-testimonial-carousel__card">
-        <img class="hf-testimonial-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/testimonio_comprimida_1_30kb.webp?v=1776128473" alt="Testimonio de Carlos M.">
-        <div class="hf-testimonial-carousel__content">
-          <div class="hf-testimonial-carousel__stars">★★★★★</div>
-          <h3 class="hf-testimonial-carousel__name">Carlos M.</h3>
-          <p class="hf-testimonial-carousel__role">Carpintero</p>
-          <div class="hf-testimonial-carousel__text">"Yo ya hacía muebles, pero todos me comparaban por precio. Anoche vendí una mesa de noche con compartimento secreto de estos planos a <span class="hf-testimonial-carousel__highlight">USD 1,500</span>, y no me pidieron descuento. Increíble."</div>
-        </div>
-      </article>
-
-      <article class="hf-testimonial-carousel__card">
-        <img class="hf-testimonial-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/testimonio_comprimida_5_30kb.webp?v=1776128478" alt="Testimonio de Javier R.">
-        <div class="hf-testimonial-carousel__content">
-          <div class="hf-testimonial-carousel__stars">★★★★★</div>
-          <h3 class="hf-testimonial-carousel__name">Javier R.</h3>
-          <p class="hf-testimonial-carousel__role">Estudiante</p>
-          <div class="hf-testimonial-carousel__text">"El primer mueble me llevó una jornada y media. Lo vendí en <span class="hf-testimonial-carousel__highlight">USD 850</span> con melamina que ya tenía en el taller. Sin los planos hubiera tardado una semana probando medidas y desperdiciando material."</div>
-        </div>
-      </article>
-
-      <article class="hf-testimonial-carousel__card">
-        <img class="hf-testimonial-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/testimonio_comprimida_7_30kb.webp?v=1776128477" alt="Testimonio de Martín A.">
-        <div class="hf-testimonial-carousel__content">
-          <div class="hf-testimonial-carousel__stars">★★★★★</div>
-          <h3 class="hf-testimonial-carousel__name">Martín A.</h3>
-          <p class="hf-testimonial-carousel__role">Aficionado de la madera</p>
-          <div class="hf-testimonial-carousel__text">"Vengo fabricando muebles hace 12 años. Este mes facturé <span class="hf-testimonial-carousel__highlight">USD 8,700</span> solo con 5 piezas de compartimento oculto. Antes tenía que hacer 10 muebles comunes para llegar al mismo número."</div>
-        </div>
-      </article>
-
-      <article class="hf-testimonial-carousel__card">
-        <img class="hf-testimonial-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/testimonio_comprimida_4_30kb.webp?v=1776128477" alt="Testimonio de Luis P.">
-        <div class="hf-testimonial-carousel__content">
-          <div class="hf-testimonial-carousel__stars">★★★★★</div>
-          <h3 class="hf-testimonial-carousel__name">Luis P.</h3>
-          <p class="hf-testimonial-carousel__role">Carpintero</p>
-          <div class="hf-testimonial-carousel__text">"Cobraba USD 400 por una mesa común. La misma mesa con el compartimento secreto la estoy vendiendo a <span class="hf-testimonial-carousel__highlight">USD 1,200</span>. Mismo trabajo, mismo material, casi el triple de dinero en el bolsillo, y no me regatean."</div>
-        </div>
-      </article>
-
-      <article class="hf-testimonial-carousel__card">
-        <img class="hf-testimonial-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/testimonio_comprimida_2_30kb.webp?v=1776128477" alt="Testimonio de Andrés T.">
-        <div class="hf-testimonial-carousel__content">
-          <div class="hf-testimonial-carousel__stars">★★★★★</div>
-          <h3 class="hf-testimonial-carousel__name">Andrés T.</h3>
-          <p class="hf-testimonial-carousel__role">Padre de familia desempleado</p>
-          <div class="hf-testimonial-carousel__text">"Subí la foto del primer mueble a Instagram y me llegaron 14 consultas en 3 días. Cerré 7 ventas a <span class="hf-testimonial-carousel__highlight">USD 950</span> cada una y tengo 7 presupuestos pendientes. Y solo por un compartimento secreto."</div>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="hf-testimonial-carousel__nav">
-      <button class="hf-testimonial-carousel__btn" id="hfTestimonialPrev" aria-label="Ver testimonios anteriores">‹</button>
-      <button class="hf-testimonial-carousel__btn" id="hfTestimonialNext" aria-label="Ver más testimonios">›</button>
-    </div>
-  </div>
-</section>
-
-<script>
-  (function() {
-    var track = document.getElementById('hfTestimonialTrack');
-    var prev = document.getElementById('hfTestimonialPrev');
-    var next = document.getElementById('hfTestimonialNext');
-    if (!track || !prev || !next) return;
-    function getScrollAmount() {
-      var firstCard = track.querySelector('.hf-testimonial-carousel__card');
-      if (!firstCard) return 300;
-      var styles = window.getComputedStyle(track);
-      var gap = parseInt(styles.columnGap || styles.gap || 20, 10);
-      return firstCard.offsetWidth + gap;
-    }
-    prev.addEventListener('click', function() { track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' }); });
-    next.addEventListener('click', function() { track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' }); });
-  })();
-</script>
-
-<!-- ============================================= -->
-<!-- 3. SECCIÓN "ESTO ES PARA TI" -->
-<!-- ============================================= -->
-<style>
-  .hf-pain-section { width: 100%; padding: 40px 16px; background: #f8f4ec; }
-  .hf-pain-section__wrap { max-width: 820px; margin: 0 auto; text-align: center; }
-  .hf-pain-section__label { display: inline-block; background: #d97b1e; color: #ffffff; font-size: 12px; line-height: 1; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 9px 16px; border-radius: 3px; margin-bottom: 18px; }
-  .hf-pain-section__title { margin: 0 0 24px; color: #1f1f1f; font-size: 32px; line-height: 1.18; font-weight: 900; letter-spacing: -0.5px; }
-  .hf-pain-section__title .accent { color: #d96f17; }
-  .hf-pain-section__card { background: #fffdf9; border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 10px; padding: 26px 22px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06); text-align: left; }
-  .hf-pain-section__list { list-style: none; margin: 0; padding: 0; }
-  .hf-pain-section__item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
-  .hf-pain-section__item:last-child { border-bottom: none; padding-bottom: 0; }
-  .hf-pain-section__item:first-child { padding-top: 0; }
-  .hf-pain-section__icon { flex: 0 0 28px; width: 28px; height: 28px; border-radius: 999px; background: #f6e4d2; color: #d96f17; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 900; margin-top: 2px; }
-  .hf-pain-section__text { color: #2c2a27; font-size: 18px; line-height: 1.55; font-weight: 600; }
-  @media screen and (max-width: 768px) {
-    .hf-pain-section { padding: 32px 12px; }
-    .hf-pain-section__label { font-size: 11px; padding: 8px 13px; margin-bottom: 14px; }
-    .hf-pain-section__title { font-size: 26px; margin-bottom: 18px; }
-    .hf-pain-section__card { padding: 20px 16px; border-radius: 8px; }
-    .hf-pain-section__item { gap: 12px; padding: 12px 0; }
-    .hf-pain-section__icon { width: 24px; height: 24px; flex-basis: 24px; font-size: 13px; }
-    .hf-pain-section__text { font-size: 16px; line-height: 1.5; }
-  }
-</style>
-
-<section class="hf-pain-section">
-  <div class="hf-pain-section__wrap">
-    <h2 class="hf-pain-section__title">Estos planos profesionales <span class="accent">son para ti si:</span></h2>
-    <div class="hf-pain-section__card">
-      <ul class="hf-pain-section__list">
-        <li class="hf-pain-section__item"><span class="hf-pain-section__icon">✓</span><span class="hf-pain-section__text">Te cansaste de esforzarte y trabajar tanto, pero el dinero nunca te alcanza</span></li>
-        <li class="hf-pain-section__item"><span class="hf-pain-section__icon">✓</span><span class="hf-pain-section__text">Siempre aparecen nuevos gastos y te preocupa no poder cubrirlos</span></li>
-        <li class="hf-pain-section__item"><span class="hf-pain-section__icon">✓</span><span class="hf-pain-section__text">Te gustaría empezar a trabajar con madera, pero sientes que todavía te falta experiencia</span></li>
-        <li class="hf-pain-section__item"><span class="hf-pain-section__icon">✓</span><span class="hf-pain-section__text">No sabes por dónde comenzar ni qué tipo de trabajos son los que más se están vendiendo</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================= -->
-<!-- 4. SECCIÓN "LO QUE VAS A APRENDER" (MODELOS) -->
-<!-- ============================================= -->
-<style>
-  .hf-models-carousel { width: 100%; padding: 42px 16px; background: #f8f4ec; }
-  .hf-models-carousel__wrap { max-width: 1100px; margin: 0 auto; text-align: center; }
-  .hf-models-carousel__label { display: inline-block; background: #d97b1e; color: #ffffff; font-size: 12px; line-height: 1; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 9px 16px; border-radius: 3px; margin-bottom: 18px; }
-  .hf-models-carousel__title { margin: 0 0 12px; color: #1f1f1f; font-size: 32px; line-height: 1.15; font-weight: 900; letter-spacing: -0.5px; }
-  .hf-models-carousel__title .accent { color: #d96f17; }
-  .hf-models-carousel__subtitle { max-width: 760px; margin: 0 auto 26px; color: #4a433b; font-size: 17px; line-height: 1.6; font-weight: 500; }
-  .hf-models-carousel__outer { position: relative; }
-  .hf-models-carousel__track { display: grid; grid-auto-flow: column; grid-auto-columns: calc(33.333% - 14px); gap: 20px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; padding: 4px 2px 10px; }
-  .hf-models-carousel__track::-webkit-scrollbar { display: none; }
-  .hf-models-carousel__card { background: #fffdf9; border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06); text-align: left; }
-  .hf-models-carousel__image-wrap { width: 100%; aspect-ratio: 1 / 1; background: #e9dfd0; overflow: hidden; }
-  .hf-models-carousel__image { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .hf-models-carousel__content { padding: 14px 14px 16px; }
-  .hf-models-carousel__model-title { margin: 0 0 6px; color: #1f1f1f; font-size: 18px; line-height: 1.3; font-weight: 800; }
-  .hf-models-carousel__model-text { margin: 0; color: #5b554d; font-size: 14px; line-height: 1.5; font-weight: 500; }
-  .hf-models-carousel__nav { display: flex; justify-content: center; gap: 12px; margin-top: 20px; }
-  .hf-models-carousel__btn { border: none; background: #d97b1e; color: #ffffff; width: 46px; height: 46px; border-radius: 999px; font-size: 20px; font-weight: 800; cursor: pointer; box-shadow: 0 8px 18px rgba(217, 123, 30, 0.28); transition: transform 0.18s ease, opacity 0.18s ease; }
-  .hf-models-carousel__btn:hover { transform: translateY(-1px); }
-  .hf-models-carousel__btn:active { transform: translateY(0); }
-  @media screen and (max-width: 990px) { .hf-models-carousel__track { grid-auto-columns: calc(50% - 10px); } }
-  @media screen and (max-width: 768px) {
-    .hf-models-carousel { padding: 34px 12px; }
-    .hf-models-carousel__label { font-size: 11px; padding: 8px 13px; margin-bottom: 14px; }
-    .hf-models-carousel__title { font-size: 26px; }
-    .hf-models-carousel__subtitle { font-size: 15px; margin-bottom: 20px; }
-    .hf-models-carousel__track { grid-auto-columns: 85%; gap: 14px; }
-    .hf-models-carousel__content { padding: 12px 12px 14px; }
-    .hf-models-carousel__model-title { font-size: 17px; }
-    .hf-models-carousel__model-text { font-size: 13px; }
-    .hf-models-carousel__btn { width: 42px; height: 42px; font-size: 18px; }
-  }
-</style>
-
-<section class="hf-models-carousel">
-  <div class="hf-models-carousel__wrap">
-    <div class="hf-models-carousel__label">Modelos incluidos</div>
-    <h2 class="hf-models-carousel__title">Mira algunos de los <span class="accent">modelos que puedes fabricar</span></h2>
-    <p class="hf-models-carousel__subtitle">Descubre diseños pensados para sorprender, modelos que nadie más ofrece y que se venden con solo mostrarlos</p>
-
-    <div class="hf-models-carousel__outer">
-      <div class="hf-models-carousel__track" id="hfModelsTrack">
-        <div class="hf-models-carousel__card">
-          <div class="hf-models-carousel__image-wrap"><img class="hf-models-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/comprimida_1_30kb.webp?v=1776106852" alt="Modelo 1 de mueble con compartimento oculto"></div>
-          <div class="hf-models-carousel__content"><h3 class="hf-models-carousel__model-title">Modelo 1</h3><p class="hf-models-carousel__model-text">Diseño premium con compartimento oculto y alto valor percibido.</p></div>
-        </div>
-        <div class="hf-models-carousel__card">
-          <div class="hf-models-carousel__image-wrap"><img class="hf-models-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/comprimida_2_30kb.webp?v=1776106852" alt="Modelo 2 de mueble con compartimento oculto"></div>
-          <div class="hf-models-carousel__content"><h3 class="hf-models-carousel__model-title">Modelo 2</h3><p class="hf-models-carousel__model-text">Ideal para ofrecer una pieza exclusiva que genera un efecto sorpresa.</p></div>
-        </div>
-        <div class="hf-models-carousel__card">
-          <div class="hf-models-carousel__image-wrap"><img class="hf-models-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/comprimida_3_30kb.webp?v=1776106853" alt="Modelo 3 de mueble con compartimento oculto"></div>
-          <div class="hf-models-carousel__content"><h3 class="hf-models-carousel__model-title">Modelo 3</h3><p class="hf-models-carousel__model-text">Un diseño pensado para destacar frente a los muebles tradicionales.</p></div>
-        </div>
-        <div class="hf-models-carousel__card">
-          <div class="hf-models-carousel__image-wrap"><img class="hf-models-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/comprimida_4_30kb.webp?v=1776106856" alt="Modelo 4 de mueble con compartimento oculto"></div>
-          <div class="hf-models-carousel__content"><h3 class="hf-models-carousel__model-title">Modelo 4</h3><p class="hf-models-carousel__model-text">Una propuesta funcional y llamativa para vender a un precio más alto.</p></div>
-        </div>
-        <div class="hf-models-carousel__card">
-          <div class="hf-models-carousel__image-wrap"><img class="hf-models-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/comprimida_8_30kb.webp?v=1776106856" alt="Modelo 5 de mueble con compartimento oculto"></div>
-          <div class="hf-models-carousel__content"><h3 class="hf-models-carousel__model-title">Modelo 5</h3><p class="hf-models-carousel__model-text">Perfecto para aumentar el valor percibido de tu trabajo.</p></div>
-        </div>
-        <div class="hf-models-carousel__card">
-          <div class="hf-models-carousel__image-wrap"><img class="hf-models-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/comprimida_9_30kb.webp?v=1776106857" alt="Modelo 6 de mueble con compartimento oculto"></div>
-          <div class="hf-models-carousel__content"><h3 class="hf-models-carousel__model-title">Modelo 6</h3><p class="hf-models-carousel__model-text">Diseño de alto impacto para clientes que buscan algo diferente.</p></div>
-        </div>
-        <div class="hf-models-carousel__card">
-          <div class="hf-models-carousel__image-wrap"><img class="hf-models-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/comprimida_7_30kb.webp?v=1776106857" alt="Modelo 7 de mueble con compartimento oculto"></div>
-          <div class="hf-models-carousel__content"><h3 class="hf-models-carousel__model-title">Modelo 7</h3><p class="hf-models-carousel__model-text">Una forma de salir de la competencia por precio con un mueble premium.</p></div>
-        </div>
-        <div class="hf-models-carousel__card">
-          <div class="hf-models-carousel__image-wrap"><img class="hf-models-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/comprimida_6_30kb.webp?v=1776106857" alt="Modelo 8 de mueble con compartimento oculto"></div>
-          <div class="hf-models-carousel__content"><h3 class="hf-models-carousel__model-title">Modelo 8</h3><p class="hf-models-carousel__model-text">Diseñado para sorprender a primera vista y justificar un precio más alto.</p></div>
-        </div>
-        <div class="hf-models-carousel__card">
-          <div class="hf-models-carousel__image-wrap"><img class="hf-models-carousel__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/comprimida_5_30kb.webp?v=1776106857" alt="Modelo 9 de mueble con compartimento oculto"></div>
-          <div class="hf-models-carousel__content"><h3 class="hf-models-carousel__model-title">Modelo 9</h3><p class="hf-models-carousel__model-text">Otro diseño exclusivo para ampliar tu catálogo y diferenciarte.</p></div>
-        </div>
-      </div>
-
-      <div class="hf-models-carousel__nav">
-        <button class="hf-models-carousel__btn" type="button" id="hfModelsPrev" aria-label="Ver modelos anteriores">‹</button>
-        <button class="hf-models-carousel__btn" type="button" id="hfModelsNext" aria-label="Ver más modelos">›</button>
+  <body>
+    <div class="announcement">
+      <div class="shell announcement__inner">
+        <span>COLECCIÓN DIGITAL DE LANZAMIENTO</span>
+        <span class="announcement__diamond" aria-hidden="true">◆</span>
+        <strong>MÁS DE 80 PATRONES PREMIUM</strong>
       </div>
     </div>
-  </div>
-</section>
 
-<script>
-  (function() {
-    var track = document.getElementById('hfModelsTrack');
-    var prev = document.getElementById('hfModelsPrev');
-    var next = document.getElementById('hfModelsNext');
-    if (!track || !prev || !next) return;
-    function getScrollAmount() {
-      var firstCard = track.querySelector('.hf-models-carousel__card');
-      if (!firstCard) return 300;
-      var cardStyles = window.getComputedStyle(track);
-      var gap = parseInt(cardStyles.columnGap || cardStyles.gap || 20, 10);
-      return firstCard.offsetWidth + gap;
-    }
-    prev.addEventListener('click', function() { track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' }); });
-    next.addEventListener('click', function() { track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' }); });
-  })();
-</script>
+    <header class="hero" id="inicio">
+      <div class="hero__texture" aria-hidden="true"></div>
+      <div class="shell hero__inner">
+        <p class="hero__eyebrow">NUEVA COLECCIÓN · PARA PRINCIPIANTES Y TEJEDORAS CON EXPERIENCIA</p>
 
-<!-- ============================================= -->
-<!-- 5. SECCIÓN "QUÉ LOGRARÁS" -->
-<!-- ============================================= -->
-<style>
-  .hf-benefits-section { width: 100%; padding: 42px 16px; background: #f8f4ec; }
-  .hf-benefits-section__wrap { max-width: 820px; margin: 0 auto; text-align: center; }
-  .hf-benefits-section__label { display: inline-block; background: #d97b1e; color: #ffffff; font-size: 12px; line-height: 1; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 9px 16px; border-radius: 3px; margin-bottom: 18px; }
-  .hf-benefits-section__title { margin: 0 0 24px; color: #1f1f1f; font-size: 32px; line-height: 1.18; font-weight: 900; letter-spacing: -0.5px; }
-  .hf-benefits-section__title .accent { color: #d96f17; }
-  .hf-benefits-section__card { background: #fffdf9; border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 10px; padding: 26px 22px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06); text-align: left; }
-  .hf-benefits-section__list { list-style: none; margin: 0; padding: 0; }
-  .hf-benefits-section__item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
-  .hf-benefits-section__item:last-child { border-bottom: none; padding-bottom: 0; }
-  .hf-benefits-section__item:first-child { padding-top: 0; }
-  .hf-benefits-section__icon { flex: 0 0 28px; width: 28px; height: 28px; border-radius: 999px; background: #e7f3e8; color: #2f7d32; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 900; margin-top: 2px; }
-  .hf-benefits-section__text { color: #2c2a27; font-size: 18px; line-height: 1.55; font-weight: 600; }
-  @media screen and (max-width: 768px) {
-    .hf-benefits-section { padding: 32px 12px; }
-    .hf-benefits-section__label { font-size: 11px; padding: 8px 13px; margin-bottom: 14px; }
-    .hf-benefits-section__title { font-size: 26px; margin-bottom: 18px; }
-    .hf-benefits-section__card { padding: 20px 16px; border-radius: 8px; }
-    .hf-benefits-section__item { gap: 12px; padding: 12px 0; }
-    .hf-benefits-section__icon { width: 24px; height: 24px; flex-basis: 24px; font-size: 13px; }
-    .hf-benefits-section__text { font-size: 16px; line-height: 1.5; }
-  }
-</style>
+        <h1>
+          Descarga más de 80 patrones de
+          <span>BOLSOS PREMIUM</span>
+          y comienza a tejer este mismo fin de semana piezas que parecen salidas de una boutique…
+        </h1>
 
-<section class="hf-benefits-section">
-  <div class="hf-benefits-section__wrap">
-    <h2 class="hf-benefits-section__title"><span class="accent">¿Qué lograrás?</span></h2>
-    <div class="hf-benefits-section__card">
-      <ul class="hf-benefits-section__list">
-        <li class="hf-benefits-section__item"><span class="hf-benefits-section__icon">✓</span><span class="hf-benefits-section__text">Comenzar con el pie derecho en la carpintería con planos un paso a paso que hasta un niño podría seguir</span></li>
-        <li class="hf-benefits-section__item"><span class="hf-benefits-section__icon">✓</span><span class="hf-benefits-section__text">Ahorrarás tiempo y dinero construyendo proyectos de lujo, funcionales, seguros y duraderos sin desperdiciar material ni adivinar medidas</span></li>
-        <li class="hf-benefits-section__item"><span class="hf-benefits-section__icon">✓</span><span class="hf-benefits-section__text">Tendrás un catálogo con los proyectos más vendidos, paso a paso</span></li>
-        <li class="hf-benefits-section__item"><span class="hf-benefits-section__icon">✓</span><span class="hf-benefits-section__text">Empezarás a conseguir clientes desde la primera semana aún si nadie te conoce</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
+        <p class="hero__desire">
+          …para usarlas, regalarlas o convertirlas en una colección que puedas vender sin competir únicamente por precio
+        </p>
 
-<!-- ============================================= -->
-<!-- 6. SECCIÓN RECAPITULACIÓN -->
-<!-- ============================================= -->
-<style>
-  .cs-magic-wrap { background: #f3eee6; padding: 48px 16px 40px; }
-  .cs-magic-inner { max-width: 980px; margin: 0 auto; text-align: center; }
-  .cs-magic-title { margin: 0; color: #4a372d; font-size: clamp(30px, 5vw, 52px); line-height: 1.08; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
-  .cs-magic-subtitle { max-width: 820px; margin: 18px auto 0; color: #6a564a; font-size: clamp(18px, 2.2vw, 24px); line-height: 1.45; font-weight: 400; }
-  .cs-magic-image { margin: 28px auto 30px; }
-  .cs-magic-image img { display: block; width: 100%; max-width: 460px; height: auto; margin: 0 auto; }
-  .cs-magic-benefits { max-width: 980px; margin: 0 auto; background: #eee7de; border: 1px solid #d8c6b5; border-radius: 22px; padding: 30px 28px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; row-gap: 24px; text-align: left; }
-  .cs-magic-benefit { display: flex; align-items: flex-start; gap: 12px; color: #4a372d; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.15; font-weight: 700; text-transform: uppercase; }
-  .cs-check { color: #d4a15f; font-size: 26px; line-height: 1; flex: 0 0 auto; margin-top: 1px; }
-  @media (max-width: 749px) {
-    .cs-magic-wrap { padding: 38px 14px 30px; }
-    .cs-magic-title { font-size: 30px; line-height: 1.1; }
-    .cs-magic-subtitle { font-size: 18px; margin-top: 14px; }
-    .cs-magic-image { margin: 22px auto 24px; }
-    .cs-magic-image img { max-width: 320px; }
-    .cs-magic-benefits { grid-template-columns: 1fr; padding: 22px 18px; row-gap: 18px; border-radius: 18px; }
-    .cs-magic-benefit { font-size: 16px; }
-    .cs-check { font-size: 22px; }
-  }
-</style>
+        <p class="hero__objection">
+          Incluso si todavía no dominas los acabados profesionales o nunca has vendido una pieza tejida
+        </p>
 
-<div class="cs-magic-wrap">
-  <div class="cs-magic-inner">
-    <h2 class="cs-magic-title">CREA MUEBLES CON<br>COMPARTIMENTOS SECRETOS</h2>
-    <p class="cs-magic-subtitle">Deja de improvisar, desperdiciar material, pelear por monedas y ofrece un producto único que te diferencia de la competencia</p>
-    <div class="cs-magic-image">
-      <img src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/oferta_final_mockups_comprimida_menos_50kb.webp?v=1776181384" alt="Mockup muebles con compartimentos secretos" loading="lazy">
-    </div>
-    <div class="cs-magic-benefits">
-      <div class="cs-magic-benefit"><span class="cs-check">✓</span><span>DISEÑOS QUE IMPACTAN Y SE VENDEN SOLOS</span></div>
-      <div class="cs-magic-benefit"><span class="cs-check">✓</span><span>PLANOS PASO A PASO FÁCILES DE SEGUIR</span></div>
-      <div class="cs-magic-benefit"><span class="cs-check">✓</span><span>MUEBLES FUNCIONALES, SEGUROS Y DURADEROS</span></div>
-      <div class="cs-magic-benefit"><span class="cs-check">✓</span><span>IDEAL PARA DIFERENCIARTE DE LA COMPETENCIA</span></div>
-      <div class="cs-magic-benefit"><span class="cs-check">✓</span><span>MATERIALES ACCESIBLES Y ARMADO PRÁCTICO</span></div>
-      <div class="cs-magic-benefit"><span class="cs-check">✓</span><span>+2800 PLANOS DE MELAMINA DE REGALO</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- ============================================= -->
-<!-- 7. SECCIÓN OFERTA -->
-<!-- ============================================= -->
-<style>
-  .hf-offer-section { width: 100%; padding: 48px 16px; background: #f8f4ec; }
-  .hf-offer-section__wrap { max-width: 560px; margin: 0 auto; }
-  .hf-offer-section__card { background: #fffdf9; border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 16px; overflow: hidden; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08); }
-  .hf-offer-section__media { aspect-ratio: 1 / 1; background: #efe7dc; }
-  .hf-offer-section__media img { width: 100%; height: 100%; display: block; object-fit: cover; }
-  .hf-offer-section__body { padding: 20px 20px 22px; }
-  .hf-offer-section__meta { margin: 0 0 10px; font-size: 11px; line-height: 1; letter-spacing: 2.5px; text-transform: uppercase; color: #8a7f73; font-weight: 800; }
-  .hf-offer-section__title { margin: 0 0 14px; font-size: 25px; line-height: 1.15; color: #1f1f1f; font-weight: 900; letter-spacing: -0.5px; }
-  .hf-offer-section__title .accent { color: #d96f17; }
-  .hf-offer-section__rating { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
-  .hf-offer-section__stars { font-size: 16px; line-height: 1; color: #f2b01e; letter-spacing: 2px; }
-  .hf-offer-section__reviews { font-size: 13px; color: #7a7268; font-weight: 600; }
-  .hf-offer-section__price-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
-  .hf-offer-section__price-old { color: rgba(0, 0, 0, 0.35); text-decoration: line-through; text-decoration-thickness: 2px; font-weight: 800; font-size: 15px; }
-  .hf-offer-section__price-new { color: #1f1f1f; font-weight: 900; font-size: 30px; }
-  .hf-offer-section__chip { font-size: 12px; font-weight: 800; padding: 6px 12px; border-radius: 999px; background: #f6e8d7; color: #8a571a; border: 1px solid rgba(217, 111, 23, 0.18); }
-  .hf-offer-section__installments { margin: 0 0 14px; font-size: 14px; line-height: 1.5; color: #5b534a; font-weight: 700; }
-  .hf-offer-section__installments-highlight { color: #2f7d32; font-weight: 900; }
-  .hf-offer-section__urgency { margin: 14px 0; padding: 14px 16px; border-radius: 14px; background: #fff4ec; border: 1px solid rgba(217, 111, 23, 0.18); display: flex; align-items: flex-start; gap: 12px; }
-  .hf-offer-section__urgency-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: #d96f17; color: #fff; font-size: 18px; flex-shrink: 0; box-shadow: 0 6px 14px rgba(217, 111, 23, 0.22); }
-  .hf-offer-section__urgency-content { flex: 1; min-width: 0; }
-  .hf-offer-section__urgency-text { margin: 0; font-size: 14px; line-height: 1.55; color: #5b534a; font-weight: 600; }
-  .hf-offer-section__urgency-text b { color: #1f1f1f; font-weight: 900; }
-  .hf-offer-section__countdown { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; width: 100%; }
-  .hf-offer-section__time-box { width: 100%; padding: 10px 6px; border-radius: 10px; background: #ffffff; border: 1px solid rgba(217,111,23,.18); box-shadow: 0 6px 14px rgba(0,0,0,.04); text-align: center; box-sizing: border-box; }
-  .hf-offer-section__time-box span { display: block; font-size: 20px; line-height: 1; font-weight: 900; color: #d96f17; letter-spacing: -0.5px; }
-  .hf-offer-section__cta { display: block; width: 100%; text-align: center; padding: 18px 20px; border-radius: 14px; background: linear-gradient(135deg, #d97b1e 0%, #c96514 100%); color: #fff; font-weight: 900; font-size: 16px; line-height: 1.3; text-decoration: none; box-shadow: 0 14px 28px rgba(217, 123, 30, 0.28); transition: all .25s ease; margin-bottom: 14px; }
-  .hf-offer-section__cta:hover { transform: translateY(-2px); }
-  .hf-offer-section__cta-sub { margin: 0 0 6px; font-size: 13px; line-height: 1.5; color: #3f3a34; font-weight: 700; text-align: center; }
-  .hf-offer-section__cta-guarantee { display: block; margin-top: 4px; font-size: 12px; font-weight: 600; color: #5a5247; line-height: 1.45; text-align: center; }
-  .hf-offer-section__guarantee { margin-top: 14px; border-radius: 14px; padding: 16px; background: #f4f8f1; border: 1px solid rgba(47, 125, 50, 0.18); }
-  .hf-offer-section__guarantee-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .hf-offer-section__guarantee-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: #2f7d32; color: #fff; font-size: 18px; }
-  .hf-offer-section__guarantee-title { margin: 0; font-weight: 900; font-size: 15px; color: #1f1f1f; }
-  .hf-offer-section__guarantee-text { font-size: 13px; line-height: 1.6; color: #5d564d; margin: 0 0 10px; }
-  .hf-offer-section__guarantee-highlight { font-size: 14px; line-height: 1.45; color: #2f7d32; margin: 0; font-weight: 800; }
-  @media (max-width: 520px) {
-    .hf-offer-section { padding: 36px 12px; }
-    .hf-offer-section__title { font-size: 22px; }
-    .hf-offer-section__price-new { font-size: 27px; }
-    .hf-offer-section__installments { font-size: 13px; }
-    .hf-offer-section__time-box span { font-size: 18px; }
-    .hf-offer-section__cta-sub { font-size: 12px; }
-    .hf-offer-section__cta-guarantee { font-size: 11px; }
-  }
-</style>
-
-<section class="hf-offer-section">
-  <div class="hf-offer-section__wrap">
-    <article class="hf-offer-section__card">
-      <div class="hf-offer-section__media">
-        <img src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/muebles_secretos_menos_50kb.webp?v=1782173645" alt="Master en muebles con compartimentos secretos">
-      </div>
-      <div class="hf-offer-section__body">
-        <p class="hf-offer-section__meta">1,256 DESCARGAS</p>
-        <h3 class="hf-offer-section__title"><span class="accent">Master en Muebles con Compartimentos Secretos</span> + 5 bonos de regalo</h3>
-        <div class="hf-offer-section__rating"><span class="hf-offer-section__stars">★★★★★ (1,256 valoraciones)</span></div>
-        <div class="hf-offer-section__price-row">
-          <span class="hf-offer-section__price-old">USD 99</span>
-          <span class="hf-offer-section__price-new">USD 19</span>
-          <span class="hf-offer-section__chip">82% OFF · Solo por hoy</span>
-        </div>
-        <p class="hf-offer-section__installments">Pago único con acceso inmediato a todos los planos y bonos</p>
-
-        <div class="hf-offer-section__urgency">
-          <div class="hf-offer-section__urgency-icon">⏰</div>
-          <div class="hf-offer-section__urgency-content">
-            <p class="hf-offer-section__urgency-text">Esta oferta es por <b>lanzamiento</b> y termina en:</p>
-            <div class="hf-offer-section__countdown">
-              <div class="hf-offer-section__time-box"><span id="hfMinutes">02</span></div>
-              <div class="hf-offer-section__time-box"><span id="hfSeconds">54</span></div>
-              <div class="hf-offer-section__time-box"><span id="hfMilliseconds">00</span></div>
+        <div class="hero__media">
+          <!-- IMAGEN 01 · Reemplaza este div por:
+          <img class="media media--hero" src="assets/images/01-hero-oferta.webp" alt="Colección Bolsos de Autor con más de 80 patrones y bonos" />
+          Recomendado: 1200x1200 px, WebP, fondo editorial oscuro o transparente. -->
+          <div class="media-placeholder media-placeholder--hero">
+            <span class="media-placeholder__index">01</span>
+            <div class="media-placeholder__copy">
+              <small>IMAGEN PRINCIPAL</small>
+              <strong>MOCKUP DE LA COLECCIÓN COMPLETA</strong>
+              <p>Producto central + bonos + tres bolsos terminados</p>
+              <em>1200 × 1200 px · WebP</em>
             </div>
           </div>
         </div>
 
-        <a class="hf-offer-section__cta" href="https://pay.hotmart.com/Y106448829R?checkoutMode=10&hideBillet=1">👉 QUIERO LOS PLANOS CON 30 DÍAS DE GARANTÍA</a>
-
-        <p class="hf-offer-section__cta-sub">
-          Acceso inmediato por correo · Pago único
-          <span class="hf-offer-section__cta-guarantee">Compra segura · Acceso instantáneo · Garantía de 30 días</span>
+        <p class="hero__description">
+          Acceso inmediato a más de 80 <strong>PATRONES PREMIUM organizados por estilo y nivel</strong>, con la
+          <strong>Ruta Punto a Boutique™</strong> —un sistema que te ayuda a pasar de elegir el diseño correcto a terminar un bolso moderno, firme y listo para usar, regalar o sumar a tu catálogo.
         </p>
 
-        <div class="hf-offer-section__guarantee">
-          <div class="hf-offer-section__guarantee-header">
-            <div class="hf-offer-section__guarantee-icon">🛡️</div>
-            <h4 class="hf-offer-section__guarantee-title">GARANTÍA DE 30 DÍAS SIN RIESGO</h4>
-          </div>
-          <p class="hf-offer-section__guarantee-text">Si en <b>30 días</b> no fabricas un mueble y lo vendes por al menos el triple que un mueble normal, te devolvemos el dinero y te quedas con los planos.</p>
-          <p class="hf-offer-section__guarantee-highlight">Compras hoy sin riesgo y con acceso inmediato.</p>
+        <div class="hero__proof" aria-label="Características confirmadas">
+          <div><strong>80+</strong><span>diseños en un solo lugar</span></div>
+          <i aria-hidden="true"></i>
+          <div><strong>1 pago</strong><span>sin mensualidades</span></div>
+          <i aria-hidden="true"></i>
+          <div><strong>Acceso digital</strong><span>aprende a tu ritmo</span></div>
         </div>
       </div>
-    </article>
-  </div>
-</section>
+    </header>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const minutesEl = document.getElementById('hfMinutes');
-  const secondsEl = document.getElementById('hfSeconds');
-  const millisecondsEl = document.getElementById('hfMilliseconds');
-  const startDuration = (2 * 60 * 1000) + (54 * 1000);
-  const endTime = Date.now() + startDuration;
-  function updateCountdown() {
-    let diff = endTime - Date.now();
-    if (diff < 0) diff = 0;
-    const minutes = Math.floor(diff / 60000);
-    const seconds = Math.floor((diff % 60000) / 1000);
-    const centiseconds = Math.floor((diff % 1000) / 10);
-    minutesEl.textContent = String(minutes).padStart(2, '0');
-    secondsEl.textContent = String(seconds).padStart(2, '0');
-    millisecondsEl.textContent = String(centiseconds).padStart(2, '0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 50);
-});
-</script>
+    <main>
+      <section class="editorial-strip" aria-label="Estilos incluidos">
+        <div class="editorial-strip__track">
+          <span>TOTES</span><i>◆</i><span>BANDOLERAS</span><i>◆</i><span>CLUTCHES</span><i>◆</i><span>MINI BAGS</span><i>◆</i><span>SHOPPERS</span><i>◆</i><span>DISEÑOS DE AUTOR</span>
+        </div>
+      </section>
 
-<!-- ============================================= -->
-<!-- 8. SECCIÓN BONOS -->
-<!-- ============================================= -->
-<style>
-  .hf-bonus-section { width:100%; padding:48px 16px; background:#f8f4ec; scroll-margin-top:20px; }
-  .hf-bonus-wrap { max-width:1000px; margin:0 auto; }
-  .hf-bonus-header { text-align:center; margin-bottom:28px; }
-  .hf-bonus-title { margin:0 0 12px; font-size:32px; line-height:1.15; font-weight:900; color:#1f1f1f; letter-spacing:-0.5px; }
-  .hf-bonus-title .accent { color:#d96f17; }
-  .hf-bonus-subtitle { margin:0 auto; max-width:720px; font-size:16px; line-height:1.6; color:#5d564d; font-weight:500; }
-  .hf-bonus-grid { display:flex; flex-direction:column; gap:18px; }
-  .hf-bonus-card { background:#fffdf9; border:1px solid rgba(0,0,0,0.06); border-radius:16px; padding:18px; box-shadow:0 8px 20px rgba(0,0,0,0.06); }
-  .hf-bonus-top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:14px; flex-wrap:wrap; }
-  .hf-bonus-badge { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:999px; background:#fff4ec; color:#d96f17; font-size:12px; font-weight:900; letter-spacing:1px; text-transform:uppercase; }
-  .hf-bonus-price { font-size:14px; font-weight:800; color:#2f7d32; }
-  .hf-bonus-card-grid { display:grid; grid-template-columns:0.95fr 1.05fr; gap:20px; align-items:start; }
-  .hf-bonus-image-wrap { background:#efe7dc; border:1px solid rgba(0,0,0,0.06); border-radius:14px; overflow:hidden; aspect-ratio:1/1; }
-  .hf-bonus-image { width:100%; height:100%; object-fit:cover; display:block; }
-  .hf-bonus-name { margin:0 0 10px; font-size:22px; line-height:1.2; font-weight:900; color:#1f1f1f; }
-  .hf-bonus-desc { margin:0 0 12px; font-size:15px; line-height:1.6; color:#5d564d; }
-  .hf-bonus-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
-  .hf-bonus-list li { display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:#4f4942; }
-  .hf-bonus-check { width:22px; height:22px; border-radius:50%; background:#d96f17; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:900; flex-shrink:0; margin-top:1px; }
-  @media(max-width:768px){
-    .hf-bonus-section { padding:36px 12px; }
-    .hf-bonus-title { font-size:26px; }
-    .hf-bonus-card-grid { grid-template-columns:1fr; }
-    .hf-bonus-name { font-size:19px; }
-    .hf-bonus-desc { font-size:14px; }
-  }
-</style>
+      <section class="section social-proof" id="experiencias">
+        <div class="shell">
+          <div class="section-title section-title--center reveal">
+            <span class="kicker">RESULTADOS REALES</span>
+            <h2>Cuando un patrón claro se encuentra con unas manos creativas</h2>
+            <p>Reemplaza estas tarjetas con experiencias verificadas y fotografías autorizadas de los bolsos terminados.</p>
+          </div>
 
-<section class="hf-bonus-section" id="oferta">
-  <div class="hf-bonus-wrap">
-    <div class="hf-bonus-header">
-      <h2 class="hf-bonus-title">Y eso no es todo... hoy también te llevas <span class="accent">estos 5 bonos GRATIS</span></h2>
-      <p class="hf-bonus-subtitle">Todo está pensado para que no solo fabriques muebles premium, sino que también vendas más, calcules mejor y evites errores.</p>
-    </div>
-
-    <div class="hf-bonus-grid">
-      <article class="hf-bonus-card">
-        <div class="hf-bonus-top"><div class="hf-bonus-badge">BONO #1</div><div class="hf-bonus-price">INCLUIDO GRATIS</div></div>
-        <div class="hf-bonus-card-grid">
-          <div class="hf-bonus-image-wrap"><img class="hf-bonus-image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/ChatGPT_Image_Apr_14_2026_09_55_20_AM_optimized.webp?v=1776179438" alt="2800 planos de muebles de melamina"></div>
-          <div>
-            <h3 class="hf-bonus-name">2800 planos de muebles de melamina</h3>
-            <p class="hf-bonus-desc">Un catálogo enorme de muebles listos para fabricar y ampliar tu oferta.</p>
-            <ul class="hf-bonus-list"><li><span class="hf-bonus-check">✓</span> Camas, racks, armarios y más</li><li><span class="hf-bonus-check">✓</span> Medidas y materiales exactos</li><li><span class="hf-bonus-check">✓</span> Más opciones = más ventas</li></ul>
+          <div class="carousel-shell reveal">
+            <button class="carousel-button carousel-button--prev" data-prev="stories" aria-label="Ver experiencias anteriores">‹</button>
+            <div class="carousel carousel--three" data-carousel="stories">
+              <article class="story-card">
+                <div class="media-placeholder media-placeholder--story"><span class="media-placeholder__index">02</span><div class="media-placeholder__copy"><small>FOTO REAL</small><strong>ALUMNA + BOLSO</strong><em>900 × 900 px</em></div></div>
+                <div class="story-card__body"><span class="rating">★★★★★</span><blockquote>“[Testimonio real sobre lo sencillo que fue seguir el patrón y terminar la pieza.]”</blockquote><strong>[Nombre real]</strong><small>[Nivel o ciudad]</small></div>
+              </article>
+              <article class="story-card">
+                <div class="media-placeholder media-placeholder--story"><span class="media-placeholder__index">03</span><div class="media-placeholder__copy"><small>FOTO ORGÁNICA</small><strong>DETALLE DEL ACABADO</strong><em>900 × 900 px</em></div></div>
+                <div class="story-card__body"><span class="rating">★★★★★</span><blockquote>“[Testimonio real que responda: ‘no soy experta’ o ‘siempre me pierdo’.]”</blockquote><strong>[Nombre real]</strong><small>[Nivel al comenzar]</small></div>
+              </article>
+              <article class="story-card">
+                <div class="media-placeholder media-placeholder--story"><span class="media-placeholder__index">04</span><div class="media-placeholder__copy"><small>FOTO REAL</small><strong>BOLSO PUBLICADO O VENDIDO</strong><em>900 × 900 px</em></div></div>
+                <div class="story-card__body"><span class="rating">★★★★★</span><blockquote>“[Testimonio real sobre usar, regalar o vender uno de los modelos.]”</blockquote><strong>[Nombre real]</strong><small>[Aficionada o emprendedora]</small></div>
+              </article>
+            </div>
+            <button class="carousel-button carousel-button--next" data-next="stories" aria-label="Ver más experiencias">›</button>
           </div>
         </div>
-      </article>
+      </section>
 
-      <article class="hf-bonus-card">
-        <div class="hf-bonus-top"><div class="hf-bonus-badge">BONO #2</div><div class="hf-bonus-price">INCLUIDO GRATIS</div></div>
-        <div class="hf-bonus-card-grid">
-          <div class="hf-bonus-image-wrap"><img class="hf-bonus-image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/7210005a-de8c-4388-a944-a98e17e883e7_optimized.webp?v=1776179438" alt="Reto: 10 clientes en 7 días"></div>
-          <div>
-            <h3 class="hf-bonus-name">Reto: 10 clientes en 7 días</h3>
-            <p class="hf-bonus-desc">Te revelaré exactamente cómo conseguí 10 clientes en 7 días, incluso cuando nadie conocía mi trabajo.</p>
-            <ul class="hf-bonus-list"><li><span class="hf-bonus-check">✓</span> WhatsApp + redes sociales</li><li><span class="hf-bonus-check">✓</span> Cómo mostrar tus muebles</li><li><span class="hf-bonus-check">✓</span> Cómo cerrar ventas</li></ul>
+      <section class="section problem" id="para-ti">
+        <div class="shell shell--narrow">
+          <div class="section-title section-title--center reveal">
+            <span class="kicker">ESTA COLECCIÓN ES PARA TI SI</span>
+            <h2>Sabes tejer. Pero el resultado todavía no se parece a lo que imaginabas.</h2>
+          </div>
+
+          <div class="problem__list reveal">
+            <article><span>01</span><p>Guardas decenas de bolsos en redes, pero cuando llega el momento de empezar <strong>no sabes cuál elegir ni dónde encontrar el patrón completo.</strong></p></article>
+            <article><span>02</span><p>Has seguido explicaciones que saltan pasos y terminas <strong>adivinando medidas, desarmando vueltas o abandonando el proyecto.</strong></p></article>
+            <article><span>03</span><p>El tejido queda bonito, pero pierde la forma o la terminación hace que <strong>se vea más casero de lo que querías.</strong></p></article>
+            <article><span>04</span><p>Quieres vender tus piezas, pero no deseas llenar tu catálogo con <strong>los mismos modelos que ofrecen todas.</strong></p></article>
+          </div>
+
+          <div class="reframe reveal">
+            <p>Muchas creen que para crear un bolso premium necesitan aprender puntos cada vez más difíciles.</p>
+            <h3>Pero si eso fuera cierto, ¿por qué dos bolsos tejidos con el mismo punto pueden verse completamente diferentes?</h3>
+            <p><strong>No es solamente el punto.</strong> Es la estructura, la combinación y la terminación que construyes alrededor.</p>
           </div>
         </div>
-      </article>
+      </section>
 
-      <article class="hf-bonus-card">
-        <div class="hf-bonus-top"><div class="hf-bonus-badge">BONO #3</div><div class="hf-bonus-price">INCLUIDO GRATIS</div></div>
-        <div class="hf-bonus-card-grid">
-          <div class="hf-bonus-image-wrap"><img class="hf-bonus-image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/42d07927-7ef7-41c7-acd4-ced1494d9d3d_optimized.webp?v=1776179438" alt="Calculadora de costos"></div>
-          <div>
-            <h3 class="hf-bonus-name">Calculadora de Costos</h3>
-            <p class="hf-bonus-desc">Calcula materiales, tiempo y margen para cobrar como premium.</p>
-            <ul class="hf-bonus-list"><li><span class="hf-bonus-check">✓</span> Precio exacto</li><li><span class="hf-bonus-check">✓</span> Margen real</li><li><span class="hf-bonus-check">✓</span> Evita perder dinero</li></ul>
+      <section class="section collection" id="coleccion">
+        <div class="shell">
+          <div class="section-title section-title--center reveal">
+            <span class="kicker">MODELOS INCLUIDOS</span>
+            <h2>Una colección que parece diseñada para una vitrina</h2>
+            <p>Usa fotografías editoriales consistentes: luz suave, fondos neutros y detalles cercanos de la textura.</p>
+          </div>
+
+          <div class="carousel-shell reveal">
+            <button class="carousel-button carousel-button--prev" data-prev="models" aria-label="Ver modelos anteriores">‹</button>
+            <div class="carousel carousel--four" data-carousel="models">
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">05</span><div class="media-placeholder__copy"><small>MODELO 01</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 01</small><h3>El bolso protagonista</h3><p>Textura, estructura y una silueta que atrae la mirada.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">06</span><div class="media-placeholder__copy"><small>MODELO 02</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 02</small><h3>La pieza de todos los días</h3><p>Funcional sin renunciar a una apariencia cuidada.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">07</span><div class="media-placeholder__copy"><small>MODELO 03</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 03</small><h3>El detalle que se regala</h3><p>Una pieza personal que se siente pensada para alguien.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">08</span><div class="media-placeholder__copy"><small>MODELO 04</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 04</small><h3>El favorito del catálogo</h3><p>Un diseño que comunica valor antes de hablar del precio.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">09</span><div class="media-placeholder__copy"><small>MODELO 05</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 05</small><h3>La silueta compacta</h3><p>Menos tamaño. La misma presencia y atención al detalle.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">10</span><div class="media-placeholder__copy"><small>MODELO 06</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 06</small><h3>El diseño de ocasión</h3><p>Una pieza especial que completa el look y no lo acompaña en silencio.</p></div></article>
+            </div>
+            <button class="carousel-button carousel-button--next" data-next="models" aria-label="Ver más modelos">›</button>
+          </div>
+
+          <p class="collection__note reveal"><strong>Y estos son solo algunos.</strong> Dentro encontrarás más de 80 posibilidades para crear según tu estilo, nivel y ocasión.</p>
+        </div>
+      </section>
+
+      <section class="section method" id="ruta">
+        <div class="shell method__grid">
+          <div class="method__intro reveal">
+            <span class="kicker kicker--gold">EL MECANISMO QUE ORDENA TODO</span>
+            <h2>Ruta Punto a Boutique™</h2>
+            <p>No necesitas otra carpeta llena de archivos. Necesitas saber cuál abrir primero y qué mirar para que el resultado final se vea intencional.</p>
+            <blockquote>“No es tejer más complicado. Es terminar con más criterio.”</blockquote>
+          </div>
+
+          <div class="method__steps reveal">
+            <article><span>01</span><div><h3>Elige sin abrumarte</h3><p>Parte del diseño que encaja con tu nivel, tiempo y resultado deseado.</p></div></article>
+            <article><span>02</span><div><h3>Teje con dirección</h3><p>Revisa materiales, puntos y secuencia antes de comenzar a contar vueltas.</p></div></article>
+            <article><span>03</span><div><h3>Eleva el acabado</h3><p>Cuida estructura, simetría y terminaciones para que la pieza gane presencia.</p></div></article>
+            <article><span>04</span><div><h3>Hazlo tuyo</h3><p>Adapta detalles para usarlo, regalarlo o incorporarlo a tu catálogo.</p></div></article>
           </div>
         </div>
-      </article>
+      </section>
 
-      <article class="hf-bonus-card">
-        <div class="hf-bonus-top"><div class="hf-bonus-badge">BONO #4</div><div class="hf-bonus-price">INCLUIDO GRATIS</div></div>
-        <div class="hf-bonus-card-grid">
-          <div class="hf-bonus-image-wrap"><img class="hf-bonus-image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/4aef6512-0a3a-4d02-a1e2-b09fa8556734_optimized.webp?v=1776179438" alt="Lista de proveedores premium"></div>
-          <div>
-            <h3 class="hf-bonus-name">Lista de Proveedores Premium</h3>
-            <p class="hf-bonus-desc">Ahorra tiempo y hasta un 70% en materiales para aumentar tu margen de ganancia.</p>
-            <ul class="hf-bonus-list"><li><span class="hf-bonus-check">✓</span> Proveedores seleccionados</li><li><span class="hf-bonus-check">✓</span> Mejor calidad</li><li><span class="hf-bonus-check">✓</span> Menos prueba y error</li></ul>
+      <section class="section outcomes" id="resultados">
+        <div class="shell outcomes__grid">
+          <div class="outcomes__media reveal">
+            <!-- IMAGEN 11 · 1000x1250 px -->
+            <div class="media-placeholder media-placeholder--portrait"><span class="media-placeholder__index">11</span><div class="media-placeholder__copy"><small>FOTO DE MODA</small><strong>MUJER CON BOLSO TERMINADO</strong><p>Escena urbana o interior editorial</p><em>1000 × 1250 px</em></div></div>
+          </div>
+          <div class="outcomes__copy reveal">
+            <span class="kicker">¿QUÉ CAMBIA PARA TI?</span>
+            <h2>Dejas de acumular inspiración y empiezas a construir una colección.</h2>
+            <ul>
+              <li><span>01</span><p><strong>Más claridad.</strong> Eliges un proyecto acorde con tu nivel sin abrir veinte pestañas.</p></li>
+              <li><span>02</span><p><strong>Menos prueba y error.</strong> Dejas de depender de explicaciones sueltas y medidas improvisadas.</p></li>
+              <li><span>03</span><p><strong>Más presencia.</strong> Tus bolsos empiezan a verse como piezas pensadas, no como simples ejercicios de crochet.</p></li>
+              <li><span>04</span><p><strong>Más posibilidades.</strong> Tejes para ti o empiezas a crear un catálogo que te represente.</p></li>
+            </ul>
           </div>
         </div>
-      </article>
+      </section>
 
-      <article class="hf-bonus-card">
-        <div class="hf-bonus-top"><div class="hf-bonus-badge">BONO #5</div><div class="hf-bonus-price">INCLUIDO GRATIS</div></div>
-        <div class="hf-bonus-card-grid">
-          <div class="hf-bonus-image-wrap"><img class="hf-bonus-image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/3ff42b0d-5434-4c06-9f49-84e3f007ca18_optimized.webp?v=1776179438" alt="Checklist anti errores"></div>
-          <div>
-            <h3 class="hf-bonus-name">Checklist anti errores</h3>
-            <p class="hf-bonus-desc">El sistema para revisar antes de cortar, ensamblar y entregar.</p>
-            <ul class="hf-bonus-list"><li><span class="hf-bonus-check">✓</span> Menos desperdicio</li><li><span class="hf-bonus-check">✓</span> Menos fallas</li><li><span class="hf-bonus-check">✓</span> Mejor resultado final</li></ul>
+      <section class="section offer" id="oferta">
+        <div class="shell">
+          <div class="section-title section-title--center section-title--light reveal">
+            <span class="kicker kicker--gold">LA COLECCIÓN COMPLETA</span>
+            <h2>Todo lo necesario para pasar del hilo a una pieza con apariencia de boutique</h2>
+            <p>No compras “muchos PDFs”. Compras opciones, dirección y una forma más clara de crear.</p>
+          </div>
+
+          <div class="offer__grid reveal">
+            <div class="offer__media">
+              <!-- IMAGEN 12 · 1200x1200 px -->
+              <div class="media-placeholder media-placeholder--pack"><span class="media-placeholder__index">12</span><div class="media-placeholder__copy"><small>MOCKUP PRINCIPAL</small><strong>BOLSOS DE AUTOR™</strong><p>Tablet + patrones + materiales + piezas terminadas</p><em>1200 × 1200 px</em></div></div>
+              <div class="offer__seal"><strong>80+</strong><span>patrones<br />premium</span></div>
+            </div>
+
+            <article class="purchase-card">
+              <span class="purchase-card__label">ACCESO DIGITAL INMEDIATO</span>
+              <h3>Bolsos de Autor™</h3>
+              <p class="purchase-card__lead">Más de 80 patrones premium + Ruta Punto a Boutique™ + 5 recursos complementarios</p>
+              <ul class="checklist">
+                <li><span>✓</span><p><strong>Más de 80 diseños</strong> para dejar de repetir siempre el mismo proyecto.</p></li>
+                <li><span>✓</span><p><strong>Organización por estilo y nivel</strong> para elegir con menos dudas.</p></li>
+                <li><span>✓</span><p><strong>Ruta Punto a Boutique™</strong> para avanzar con un criterio claro.</p></li>
+                <li><span>✓</span><p><strong>Uso personal o para tu catálogo</strong> según lo que quieras construir.</p></li>
+                <li><span>✓</span><p><strong>Pago único</strong> y acceso sin mensualidades.</p></li>
+              </ul>
+
+              <div class="purchase-card__price">
+                <div><small>VALOR DE REFERENCIA</small><del>USD 67</del></div>
+                <div><small>HOY, PAGO ÚNICO</small><strong>USD 15</strong></div>
+              </div>
+
+              <a class="button button--primary" data-checkout href="#resumen">QUIERO LA COLECCIÓN COMPLETA <span>→</span></a>
+              <p class="button-note">Compra segura · Acceso por correo · 7 días de garantía</p>
+            </article>
           </div>
         </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </section>
 
-<!-- ============================================= -->
-<!-- 9. SECCIÓN STACK DE OFERTA (RESUMEN FINAL) -->
-<!-- ============================================= -->
-<style>
-  .hf-order-summary { width: 100%; padding: 32px 16px 48px; background: #f8f4ec; }
-  .hf-order-summary__wrap { max-width: 420px; margin: 0 auto; }
-  .hf-order-summary__card { background: #fffdf9; border: 3px solid #6f4b33; border-radius: 22px; overflow: hidden; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08); }
-  .hf-order-summary__topbar { background: #6f4b33; color: #fff; text-align: center; font-weight: 900; font-size: 15px; line-height: 1.25; padding: 14px 16px; letter-spacing: -0.2px; text-transform: uppercase; }
-  .hf-order-summary__body { padding: 22px 14px 16px; }
-  .hf-order-summary__title { margin: 0 0 18px; text-align: center; color: #6a4427; font-size: 26px; line-height: 1.1; font-weight: 900; text-transform: uppercase; letter-spacing: -0.4px; }
-  .hf-order-summary__desc { margin: 0 0 16px; text-align: center; color: #6a6258; font-size: 16px; line-height: 1.45; font-weight: 500; }
-  .hf-order-summary__desc b { color: #4c3728; }
-  .hf-order-summary__image-box { width: 100%; max-width: 250px; margin: 0 auto 18px; background: #fff; border-radius: 14px; padding: 12px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06); }
-  .hf-order-summary__image { width: 100%; display: block; border-radius: 10px; }
-  .hf-order-summary__includes { background: #fbf8f3; border: 1.5px dashed rgba(217, 111, 23, 0.28); border-radius: 16px; padding: 16px 14px; margin-bottom: 16px; }
-  .hf-order-summary__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-  .hf-order-summary__item { display: flex; align-items: flex-start; gap: 10px; color: #4f4942; font-size: 15px; line-height: 1.45; font-weight: 600; }
-  .hf-order-summary__check { flex: 0 0 20px; width: 20px; height: 20px; border-radius: 6px; background: #6da227; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; margin-top: 1px; }
-  .hf-order-summary__bonus-value { margin-top: 14px; background: #fff8e7; border: 1.5px dashed #8eb64c; border-radius: 12px; padding: 12px 10px; text-align: center; color: #5e432f; font-size: 15px; line-height: 1.35; font-weight: 900; text-transform: uppercase; }
-  .hf-order-summary__bonus-value b { color: #6a4427; }
-  .hf-order-summary__price-box { background: #f6f0e5; border: 1px solid rgba(111, 75, 51, 0.12); border-radius: 16px; padding: 16px 14px 18px; text-align: center; margin-bottom: 14px; }
-  .hf-order-summary__normal { color: #7a6d5f; font-size: 15px; line-height: 1.4; font-weight: 700; text-transform: uppercase; }
-  .hf-order-summary__normal s { color: rgba(122, 109, 95, 0.75); text-decoration-thickness: 2px; }
-  .hf-order-summary__today { color: #6a4427; font-size: 18px; line-height: 1.1; font-weight: 900; text-transform: uppercase; margin-top: 4px; }
-  .hf-order-summary__price { color: #6a4427; font-size: 58px; line-height: 1; font-weight: 900; letter-spacing: -1.4px; margin: 8px 0 6px; }
-  .hf-order-summary__installments { margin: 0 0 10px; font-size: 16px; line-height: 1.4; color: #5b534a; font-weight: 700; }
-  .hf-order-summary__installments-highlight { color: #2f7d32; font-weight: 900; }
-  .hf-order-summary__save { color: #6da227; font-size: 22px; line-height: 1.2; font-weight: 900; text-transform: uppercase; }
-  .hf-order-summary__cta { display: block; width: 100%; border: none; text-decoration: none; text-align: center; background: #6f9920; color: #fff; font-size: 19px; line-height: 1.2; font-weight: 900; text-transform: uppercase; padding: 16px 14px; border-radius: 12px; box-shadow: 0 10px 24px rgba(111, 153, 32, 0.22); margin-bottom: 12px; }
-  .hf-order-summary__cta:hover { filter: brightness(1.03); }
-  .hf-order-summary__cta-sub { margin: 0; font-size: 13px; line-height: 1.5; color: #4c3728; font-weight: 700; text-align: center; }
-  .hf-order-summary__cta-guarantee { display: block; margin-top: 4px; font-size: 12px; font-weight: 600; color: #6a6258; line-height: 1.45; text-align: center; }
-  .hf-order-summary__guarantee { margin-top: 14px; border-radius: 14px; padding: 16px; background: #f4f8f1; border: 1px solid rgba(47, 125, 50, 0.18); }
-  .hf-order-summary__guarantee-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .hf-order-summary__guarantee-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: #2f7d32; color: #fff; font-size: 18px; }
-  .hf-order-summary__guarantee-title { margin: 0; font-weight: 900; font-size: 15px; color: #1f1f1f; }
-  .hf-order-summary__guarantee-text { font-size: 13px; line-height: 1.6; color: #5d564d; margin: 0 0 10px; }
-  .hf-order-summary__guarantee-text b { color: #1f1f1f; font-weight: 900; }
-  .hf-order-summary__guarantee-highlight { font-size: 14px; line-height: 1.45; color: #2f7d32; margin: 0; font-weight: 800; }
-  @media (max-width: 520px) {
-    .hf-order-summary { padding: 24px 10px 36px; }
-    .hf-order-summary__topbar { font-size: 14px; padding: 12px 12px; }
-    .hf-order-summary__body { padding: 20px 12px 14px; }
-    .hf-order-summary__title { font-size: 24px; }
-    .hf-order-summary__desc { font-size: 15px; }
-    .hf-order-summary__item { font-size: 14px; }
-    .hf-order-summary__price { font-size: 48px; }
-    .hf-order-summary__installments { font-size: 15px; }
-    .hf-order-summary__save { font-size: 19px; }
-    .hf-order-summary__cta { font-size: 17px; padding: 15px 12px; }
-    .hf-order-summary__cta-sub { font-size: 12px; }
-    .hf-order-summary__cta-guarantee { font-size: 11px; }
-  }
-</style>
-
-<section class="hf-order-summary">
-  <div class="hf-order-summary__wrap">
-    <div class="hf-order-summary__card">
-      <div class="hf-order-summary__topbar">🔥 Última oportunidad para obtener los 5 bonos</div>
-
-      <div class="hf-order-summary__body">
-        <h2 class="hf-order-summary__title">Resumen de tu pedido</h2>
-        <p class="hf-order-summary__desc">Llévate el pack <b>Master en Muebles con Compartimentos Secretos</b> + 5 bonos exclusivos por un único pago.</p>
-
-        <div class="hf-order-summary__image-box">
-          <img class="hf-order-summary__image" src="https://cdn.shopify.com/s/files/1/0720/3858/0355/files/oferta_final_mockups_comprimida_menos_50kb.webp?v=1776181384" alt="Pack principal con bonos incluidos" />
-        </div>
-
-        <div class="hf-order-summary__includes">
-          <ul class="hf-order-summary__list">
-            <li class="hf-order-summary__item"><span class="hf-order-summary__check">✓</span><span>Master en Muebles con Compartimentos Secretos</span></li>
-            <li class="hf-order-summary__item"><span class="hf-order-summary__check">✓</span><span><b>BONO 1:</b> 2800 planos de muebles de melamina</span></li>
-            <li class="hf-order-summary__item"><span class="hf-order-summary__check">✓</span><span><b>BONO 2:</b> Guía para conseguir 10 clientes en 7 días</span></li>
-            <li class="hf-order-summary__item"><span class="hf-order-summary__check">✓</span><span><b>BONO 3:</b> Calculadora de Costos</span></li>
-            <li class="hf-order-summary__item"><span class="hf-order-summary__check">✓</span><span><b>BONO 4:</b> Lista de Proveedores Premium</span></li>
-            <li class="hf-order-summary__item"><span class="hf-order-summary__check">✓</span><span><b>BONO 5:</b> Checklist anti errores</span></li>
-          </ul>
-          <div class="hf-order-summary__bonus-value">🎁 Valor total bonos: <b>USD 97</b><br>¡Gratis solo por hoy!</div>
-        </div>
-
-        <div class="hf-order-summary__price-box">
-          <div class="hf-order-summary__normal">Valor normal: <s>USD 99</s></div>
-          <div class="hf-order-summary__today">Hoy solo:</div>
-          <div class="hf-order-summary__price">USD 19</div>
-          <p class="hf-order-summary__installments">Pago único con acceso inmediato</p>
-          <div class="hf-order-summary__save">Ahorras USD 80 hoy</div>
-        </div>
-
-        <a class="hf-order-summary__cta" href="https://pay.hotmart.com/Y106448829R?checkoutMode=10&hideBillet=1">👉 QUIERO LOS PLANOS CON LOS 30 DÍAS DE GARANTÍA</a>
-
-        <p class="hf-order-summary__cta-sub">
-          Acceso inmediato por correo · Pago único
-          <span class="hf-order-summary__cta-guarantee">Compra segura · Acceso instantáneo · Garantía de 30 días</span>
-        </p>
-
-        <div class="hf-order-summary__guarantee">
-          <div class="hf-order-summary__guarantee-header">
-            <div class="hf-order-summary__guarantee-icon">🛡️</div>
-            <h4 class="hf-order-summary__guarantee-title">GARANTÍA DE 30 DÍAS SIN RIESGO</h4>
+      <section class="section bonuses" id="bonos">
+        <div class="shell">
+          <div class="section-title section-title--center reveal">
+            <span class="kicker">Y ESO NO ES TODO</span>
+            <h2>Cinco recursos para resolver lo que aparece después de elegir el patrón</h2>
+            <p>Porque una oferta no se vuelve irresistible por acumular archivos, sino por eliminar las dudas que detienen el resultado.</p>
           </div>
-          <p class="hf-order-summary__guarantee-text">Si en <b>30 días</b> no fabricas un mueble y lo vendes por al menos el triple que un mueble normal, te devolvemos el dinero y te quedas con los planos.</p>
-          <p class="hf-order-summary__guarantee-highlight">Compras hoy sin riesgo y con acceso inmediato.</p>
+
+          <div class="bonus-list">
+            <article class="bonus-card reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">13</span><div class="media-placeholder__copy"><small>BONO 01</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #1</span><strong>INCLUIDO</strong></div><h3>Mapa Empieza por Aquí™</h3><p>Una selección inicial para que más de 80 opciones no se conviertan en más de 80 dudas.</p><ul><li>Proyectos recomendados para comenzar</li><li>Ruta según nivel</li><li>Primera decisión resuelta</li></ul><small>Valor de referencia: USD 9</small></div></article>
+            <article class="bonus-card bonus-card--reverse reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">14</span><div class="media-placeholder__copy"><small>BONO 02</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #2</span><strong>INCLUIDO</strong></div><h3>Acabados de Boutique™</h3><p>Los detalles que hacen que una pieza se vea terminada y no simplemente tejida.</p><ul><li>Estructura y forma</li><li>Asas, bordes y cierres</li><li>Terminaciones más limpias</li></ul><small>Valor de referencia: USD 17</small></div></article>
+            <article class="bonus-card reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">15</span><div class="media-placeholder__copy"><small>BONO 03</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #3</span><strong>INCLUIDO</strong></div><h3>Mapa de Materiales sin Errores™</h3><p>Una guía de consulta para elegir hilo, aguja y accesorios según el resultado que deseas.</p><ul><li>Menos compras equivocadas</li><li>Mejor relación entre material y diseño</li><li>Decisiones más rápidas</li></ul><small>Valor de referencia: USD 15</small></div></article>
+            <article class="bonus-card bonus-card--reverse reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">16</span><div class="media-placeholder__copy"><small>BONO 04</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #4</span><strong>INCLUIDO</strong></div><h3>Precio sin Regalar tu Trabajo™</h3><p>Una plantilla para sumar materiales, tiempo y margen antes de ponerle precio a tu pieza.</p><ul><li>Evita cobrar solo los materiales</li><li>Visualiza el margen</li><li>Cotiza con mayor criterio</li></ul><small>Valor de referencia: USD 19</small></div></article>
+            <article class="bonus-card reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">17</span><div class="media-placeholder__copy"><small>BONO 05</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #5</span><strong>INCLUIDO</strong></div><h3>Fotos que Despiertan Deseo™</h3><p>Una mini guía para fotografiar tus bolsos con celular y mostrarlos de manera más atractiva.</p><ul><li>Fondos sencillos</li><li>Ángulos que favorecen la pieza</li><li>Una imagen más consistente</li></ul><small>Valor de referencia: USD 14</small></div></article>
+          </div>
         </div>
+      </section>
+
+      <section class="section summary" id="resumen">
+        <div class="shell summary__grid">
+          <div class="summary__copy reveal">
+            <span class="kicker">RESUMEN DE TU PEDIDO</span>
+            <h2>Tu próxima colección puede empezar con un solo patrón.</h2>
+            <p>Pero esta vez no tendrás que buscarlo, reconstruirlo ni preguntarte qué hacer después.</p>
+            <div class="media-placeholder media-placeholder--landscape"><span class="media-placeholder__index">18</span><div class="media-placeholder__copy"><small>IMAGEN FINAL</small><strong>VARIOS BOLSOS EN UNA ESCENA EDITORIAL</strong><em>1400 × 900 px</em></div></div>
+          </div>
+
+          <aside class="summary-card reveal">
+            <div class="summary-card__bar">BOLSOS DE AUTOR™ · COLECCIÓN COMPLETA</div>
+            <h3>Esto es todo lo que recibes</h3>
+            <ul>
+              <li><span>✓</span><div><strong>Más de 80 patrones premium</strong><small>Colección principal</small></div><b>USD 67</b></li>
+              <li><span>✓</span><div><strong>Mapa Empieza por Aquí™</strong><small>Bono 1</small></div><b>USD 9</b></li>
+              <li><span>✓</span><div><strong>Acabados de Boutique™</strong><small>Bono 2</small></div><b>USD 17</b></li>
+              <li><span>✓</span><div><strong>Mapa de Materiales™</strong><small>Bono 3</small></div><b>USD 15</b></li>
+              <li><span>✓</span><div><strong>Precio sin Regalar tu Trabajo™</strong><small>Bono 4</small></div><b>USD 19</b></li>
+              <li><span>✓</span><div><strong>Fotos que Despiertan Deseo™</strong><small>Bono 5</small></div><b>USD 14</b></li>
+            </ul>
+            <div class="summary-card__value"><span>VALOR DE REFERENCIA</span><del>USD 141</del></div>
+            <div class="summary-card__today"><small>HOY SOLO</small><strong>USD 15</strong><span>Pago único · Sin mensualidades</span></div>
+            <a class="button button--primary" data-checkout href="#resumen">SÍ, QUIERO EMPEZAR AHORA <span>→</span></a>
+            <p class="button-note">Acceso digital por correo · Compra protegida</p>
+            <div class="mini-guarantee"><span>7</span><p><strong>Días para decidir</strong>Explora el contenido. Si no es para ti, solicita el reembolso dentro del plazo indicado.</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="guarantee section">
+        <div class="shell shell--narrow guarantee__inner reveal">
+          <div class="guarantee__seal"><strong>7</strong><span>DÍAS</span></div>
+          <div><span class="kicker">GARANTÍA SIN COMPLICACIONES</span><h2>Primero mira la colección. Después decides.</h2><p>Entra, revisa el contenido y confirma si es lo que esperabas. Si durante los primeros 7 días consideras que no es para ti, puedes solicitar la devolución según las condiciones de la plataforma.</p></div>
+        </div>
+      </section>
+
+      <section class="section faq" id="preguntas">
+        <div class="shell shell--narrow">
+          <div class="section-title section-title--center reveal"><span class="kicker">PREGUNTAS FRECUENTES</span><h2>Antes de elegir tu primer diseño</h2></div>
+          <div class="faq__list reveal">
+            <details><summary>¿Necesito ser experta en crochet?</summary><p>No. Puedes comenzar por los diseños acordes con tu nivel. Es recomendable reconocer los puntos básicos antes de avanzar hacia los modelos con más detalle.</p></details>
+            <details><summary>¿Recibiré productos físicos?</summary><p>No. Es una colección digital. Recibirás las instrucciones de acceso en el correo utilizado durante la compra.</p></details>
+            <details><summary>¿Puedo vender los bolsos que yo misma teja?</summary><p>Puedes vender las piezas terminadas que tú produzcas, siempre que la licencia final del producto lo permita. Los patrones no pueden copiarse, compartirse ni revenderse.</p></details>
+            <details><summary>¿El pago es mensual?</summary><p>No. Realizas un solo pago para acceder al contenido incluido en esta oferta.</p></details>
+            <details><summary>¿Qué materiales necesito?</summary><p>Dependerá del diseño seleccionado. Consulta los materiales indicados en cada patrón antes de comenzar el proyecto.</p></details>
+            <details><summary>¿Cómo funciona la garantía?</summary><p>Tienes 7 días desde la compra para solicitar la devolución, de acuerdo con las condiciones de la plataforma de pago.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="closing__texture" aria-hidden="true"></div>
+        <div class="shell shell--narrow closing__inner reveal">
+          <span class="kicker kicker--gold">TU PRÓXIMA PIEZA EMPIEZA AQUÍ</span>
+          <h2>No necesitas guardar otro bolso en inspiración.<br /><em>Necesitas elegir uno y empezar a tejerlo.</em></h2>
+          <p>Más de 80 diseños te esperan dentro de una colección organizada para que esta vez la idea no se quede en la pantalla.</p>
+          <a class="button button--light" data-checkout href="#resumen">QUIERO MIS PATRONES PREMIUM <span>→</span></a>
+          <small>USD 15 · Pago único · Acceso digital · Garantía de 7 días</small>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer__grid">
+        <a class="footer__brand" href="#inicio">Bolsos de Autor<sup>™</sup></a>
+        <p>Producto digital educativo. Los resultados dependen de la práctica, los materiales y la dedicación de cada persona.</p>
+        <nav aria-label="Enlaces legales"><a href="legal/terminos.html">Términos</a><a href="legal/privacidad.html">Privacidad</a><a href="#preguntas">Ayuda</a></nav>
       </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-</body>
+    <div class="mobile-purchase" aria-label="Acceso a la oferta">
+      <div><small>PAGO ÚNICO</small><strong>USD 15</strong></div>
+      <a data-checkout href="#resumen">QUIERO ACCEDER</a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
