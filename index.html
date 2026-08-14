@@ -226,7 +226,9 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .countdown-box__icon { display:grid; flex:0 0 28px; width:28px; height:28px; place-items:center; color:#fff; border-radius:8px; background:var(--wine); box-shadow:0 6px 14px rgba(104,31,61,.18); font-size:15px; }
 .countdown-box p { margin:0; color:#4f3b33; font-size:9px; }
 .countdown-box p strong { color:#201719; }
-.countdown { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; }
+.countdown-box.is-expired { border-color:#c8bca8; background:#f3efe8; }
+.countdown-box.is-expired .countdown-box__icon { background:#756d66; }
+.countdown { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; }
 .countdown > div { display:grid; min-height:46px; place-items:center; padding:6px 3px; border:1px solid #dfbf71; border-radius:7px; background:#fff; }
 .countdown strong { color:var(--wine); font-family:var(--sans); font-size:18px; line-height:1; }
 .countdown small { color:#8a745f; font-size:6px; font-weight:800; letter-spacing:.08em; }
@@ -655,12 +657,11 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
                 <span class="discount-badge">78% OFF · LANZAMIENTO</span>
               </div>
 
-              <div class="countdown-box" data-countdown-box hidden>
-                <div><span class="countdown-box__icon" aria-hidden="true">◷</span><p>Esta oferta de lanzamiento termina en:</p></div>
+              <div class="countdown-box" data-countdown-box>
+                <div><span class="countdown-box__icon" aria-hidden="true">◷</span><p data-countdown-message>Tu acceso con los bonos de hoy, <strong data-today-date></strong>, queda reservado durante:</p></div>
                 <div class="countdown" data-countdown aria-label="Tiempo restante">
-                  <div><strong data-days>00</strong><small>DÍAS</small></div>
                   <div><strong data-hours>00</strong><small>HORAS</small></div>
-                  <div><strong data-minutes>00</strong><small>MIN</small></div>
+                  <div><strong data-minutes>10</strong><small>MIN</small></div>
                   <div><strong data-seconds>00</strong><small>SEG</small></div>
                 </div>
               </div>
@@ -691,7 +692,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
       </section>
 
       <section class="section summary" id="resumen">
-        <div class="last-chance reveal">◆ ÚLTIMA OPORTUNIDAD PARA OBTENER LOS 5 BONOS INCLUIDOS EN EL LANZAMIENTO</div>
+        <div class="last-chance reveal">◆ ÚLTIMA OPORTUNIDAD DE HOY PARA OBTENER LOS 5 BONOS INCLUIDOS EN EL LANZAMIENTO</div>
         <div class="shell summary__grid">
           <div class="summary__copy reveal">
             <span class="kicker">RESUMEN DE TU PEDIDO</span>
@@ -701,7 +702,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
           </div>
 
           <aside class="summary-card reveal">
-            <div class="summary-card__bar">◆ OFERTA DE LANZAMIENTO · INCLUYE LOS 5 BONOS</div>
+            <div class="summary-card__bar">◆ CONDICIÓN DE LANZAMIENTO DE HOY · INCLUYE LOS 5 BONOS</div>
             <h3>Esto es todo lo que recibes</h3>
             <ul>
               <li><span>✓</span><div><strong>Más de 80 patrones premium</strong><small>Colección principal</small></div><b>USD 67</b></li>
@@ -713,12 +714,11 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
             </ul>
             <div class="summary-card__value"><span>VALOR DE REFERENCIA</span><del>USD 141</del></div>
             <div class="summary-card__today"><small>HOY SOLO</small><strong>USD 15</strong><span>89% OFF sobre el valor total · Pago único</span></div>
-            <div class="countdown-box countdown-box--summary" data-countdown-box hidden>
-              <div><span class="countdown-box__icon" aria-hidden="true">◷</span><p>El precio de lanzamiento termina en:</p></div>
+            <div class="countdown-box countdown-box--summary" data-countdown-box>
+              <div><span class="countdown-box__icon" aria-hidden="true">◷</span><p data-countdown-message>El precio mostrado hoy, <strong data-today-date></strong>, queda reservado durante:</p></div>
               <div class="countdown" data-countdown aria-label="Tiempo restante">
-                <div><strong data-days>00</strong><small>DÍAS</small></div>
                 <div><strong data-hours>00</strong><small>HORAS</small></div>
-                <div><strong data-minutes>00</strong><small>MIN</small></div>
+                <div><strong data-minutes>10</strong><small>MIN</small></div>
                 <div><strong data-seconds>00</strong><small>SEG</small></div>
               </div>
             </div>
@@ -778,46 +778,59 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 // REEMPLAZA únicamente esta URL antes de publicar.
 const CHECKOUT_URL = "https://pay.hotmart.com/TU-CHECKOUT";
 
-// Escribe aquí una fecha real de cierre con zona horaria de Colombia.
-// Ejemplo: "2026-08-31T23:59:59-05:00"
-// Si queda vacío, los contadores permanecen ocultos y no se crea urgencia falsa.
-const OFFER_DEADLINE = "";
-
 document.querySelectorAll("[data-checkout]").forEach((link) => {
   link.href = CHECKOUT_URL;
 });
 
 const countdownBoxes = document.querySelectorAll("[data-countdown-box]");
-const deadline = new Date(OFFER_DEADLINE).getTime();
+const todayFields = document.querySelectorAll("[data-today-date]");
+const dateFormatter = new Intl.DateTimeFormat("es-CO", { day: "numeric", month: "long", year: "numeric" });
+const TIMER_DURATION = 10 * 60 * 1_000;
+const TIMER_KEY = "bolsos-boutique-session-deadline";
+const formattedDate = dateFormatter.format(new Date());
+todayFields.forEach((field) => { field.textContent = formattedDate; });
+let savedDeadline;
+try {
+  savedDeadline = sessionStorage.getItem(TIMER_KEY);
+} catch {
+  savedDeadline = null;
+}
 
-if (OFFER_DEADLINE && Number.isFinite(deadline) && deadline > Date.now()) {
-  countdownBoxes.forEach((box) => { box.hidden = false; });
-  let countdownTimer;
+let sessionDeadline = Number(savedDeadline);
+if (!Number.isFinite(sessionDeadline) || sessionDeadline <= 0) {
+  sessionDeadline = Date.now() + TIMER_DURATION;
+  try {
+    sessionStorage.setItem(TIMER_KEY, String(sessionDeadline));
+  } catch {
+    // El contador sigue funcionando aunque el navegador bloquee sessionStorage.
+  }
+}
 
-  const updateCountdown = () => {
-    const remaining = Math.max(0, deadline - Date.now());
-    const days = Math.floor(remaining / 86_400_000);
-    const hours = Math.floor((remaining % 86_400_000) / 3_600_000);
-    const minutes = Math.floor((remaining % 3_600_000) / 60_000);
-    const seconds = Math.floor((remaining % 60_000) / 1_000);
-    const values = { days, hours, minutes, seconds };
+const updateCountdown = () => {
+  const now = new Date();
+  const remaining = Math.max(0, sessionDeadline - now.getTime());
+  const values = {
+    hours: Math.floor(remaining / 3_600_000),
+    minutes: Math.floor((remaining % 3_600_000) / 60_000),
+    seconds: Math.floor((remaining % 60_000) / 1_000),
+  };
 
-    countdownBoxes.forEach((box) => {
-      Object.entries(values).forEach(([unit, value]) => {
-        const field = box.querySelector(`[data-${unit}]`);
-        if (field) field.textContent = String(value).padStart(2, "0");
-      });
+  countdownBoxes.forEach((box) => {
+    Object.entries(values).forEach(([unit, value]) => {
+      const field = box.querySelector(`[data-${unit}]`);
+      if (field) field.textContent = String(value).padStart(2, "0");
     });
 
     if (remaining === 0) {
-      clearInterval(countdownTimer);
-      countdownBoxes.forEach((box) => { box.hidden = true; });
+      box.classList.add("is-expired");
+      const message = box.querySelector("[data-countdown-message]");
+      if (message) message.textContent = "La reserva temporal de esta sesión finalizó.";
     }
-  };
+  });
+};
 
-  updateCountdown();
-  countdownTimer = setInterval(updateCountdown, 1_000);
-}
+updateCountdown();
+setInterval(updateCountdown, 1_000);
 
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const name = carousel.dataset.carousel;
