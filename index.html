@@ -105,7 +105,13 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .section-title h2, .method h2, .outcomes h2, .summary h2, .guarantee h2, .closing h2 { margin-bottom:14px; font-family:var(--serif); font-size:clamp(38px,4.4vw,56px); font-weight:600; letter-spacing:-.035em; line-height:1.02; }
 .section-title > p:last-child { max-width:690px; margin:0 auto; color:var(--muted); font-size:13px; }
 
-.social-proof { background:#f3ece2; }
+.social-proof { padding-top:72px; background:#fff; }
+.proof-heading { max-width:760px; margin-bottom:30px; }
+.proof-heading h2 { color:#181416; font-family:var(--sans); font-size:clamp(28px,3.2vw,40px); font-weight:800; letter-spacing:-.04em; line-height:1.12; }
+.proof-heading mark { padding:0 .08em; color:inherit; background:linear-gradient(transparent 56%,#e1b849 56%); box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+.proof-heading > p:last-child { max-width:650px; color:#5f5458; font-size:12px; line-height:1.65; }
+.proof-heading > p:last-child strong { color:#272024; }
+.social-proof .carousel-shell { max-width:920px; margin-inline:auto; }
 .carousel-shell { position:relative; }
 .carousel { display:grid; grid-auto-flow:column; gap:19px; overflow-x:auto; padding:3px 2px 25px; scroll-behavior:smooth; scroll-snap-type:x mandatory; scrollbar-width:none; }
 .carousel::-webkit-scrollbar { display:none; }
@@ -115,11 +121,19 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .carousel-button--prev { left:-21px; }
 .carousel-button--next { right:-21px; }
 .story-card, .model-card { overflow:hidden; border:1px solid var(--line); background:#fff; box-shadow:var(--shadow-soft); scroll-snap-align:start; }
-.story-card__body { display:flex; min-height:220px; flex-direction:column; padding:20px; }
-.rating { color:var(--gold); font-size:12px; letter-spacing:.1em; }
-.story-card blockquote { flex:1; margin:10px 0 17px; color:#514549; font-family:var(--serif); font-size:17px; font-style:italic; line-height:1.35; }
-.story-card__body > strong { font-size:11px; }
-.story-card__body > small { color:var(--muted); font-size:9px; }
+.social-proof .carousel { padding-bottom:18px; scrollbar-width:thin; scrollbar-color:#c9b995 #eee6d5; }
+.social-proof .carousel::-webkit-scrollbar { display:block; height:7px; }
+.social-proof .carousel::-webkit-scrollbar-track { background:#eee6d5; }
+.social-proof .carousel::-webkit-scrollbar-thumb { border-radius:999px; background:#c9b995; }
+.social-proof .carousel-button { color:#f5cc64; background:#3b2a25; box-shadow:none; }
+.social-proof .story-card { border-color:#deceb0; border-radius:8px; background:#fbf5e8; box-shadow:0 5px 16px rgba(50,35,26,.06); }
+.social-proof .media-placeholder--story { aspect-ratio:1/.96; }
+.story-card__body { display:flex; min-height:270px; flex-direction:column; padding:16px 14px 20px; text-align:center; }
+.rating { color:#d8911d; font-size:12px; letter-spacing:.1em; }
+.story-card__identity { display:grid; gap:2px; margin:8px 0 10px; }
+.story-card__identity strong { color:#251b1e; font-size:11px; }
+.story-card__identity small { color:#8b5d39; font-size:8px; letter-spacing:.09em; }
+.story-card blockquote { flex:1; margin:0; color:#473a3e; font-family:var(--sans); font-size:10px; font-style:normal; line-height:1.68; text-align:left; }
 
 .problem { background:var(--cream); }
 .problem__list { border-top:1px solid var(--line); }
@@ -132,13 +146,31 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .reframe h3 { max-width:760px; margin:13px auto; color:var(--gold-light); font-family:var(--serif); font-size:clamp(25px,3vw,34px); font-weight:600; line-height:1.1; }
 .reframe p strong { color:#fff; }
 
-.collection { background:var(--ivory); }
-.model-card > div:last-child { padding:19px; }
-.model-card > div:last-child small { color:var(--wine); font-size:8px; font-weight:800; letter-spacing:.14em; }
-.model-card h3 { margin:4px 0 6px; font-family:var(--serif); font-size:22px; font-weight:600; line-height:1.05; }
-.model-card p { margin:0; color:var(--muted); font-size:10px; }
-.collection__note { margin:23px 0 0; color:var(--muted); font-size:11px; text-align:center; }
-.collection__note strong { color:var(--wine); }
+.collection { overflow:hidden; color:#fff; border-top:3px solid #e7d9bd; border-bottom:3px solid #e7d9bd; background:radial-gradient(circle at 50% 0,rgba(127,46,77,.2),transparent 34%),linear-gradient(180deg,#241019,#180f13); }
+.collection-heading { max-width:700px; margin-bottom:29px; }
+.collection-heading h2 { color:#fff; font-family:var(--sans); font-size:clamp(28px,3.2vw,40px); font-weight:800; letter-spacing:-.04em; line-height:1.14; }
+.collection-heading h2 span { color:var(--gold-light); }
+.collection-heading > p:last-child { color:rgba(255,255,255,.72); font-size:11px; line-height:1.65; }
+.collection-heading > p:last-child strong { color:#fff; }
+.collection .carousel-shell { width:min(100vw,1500px); margin-left:50%; padding-inline:12px; transform:translateX(-50%); }
+.collection .carousel { grid-auto-columns:255px; gap:12px; padding-bottom:8px; }
+.collection .carousel-button { display:none; }
+.collection .model-card { position:relative; min-height:320px; border-color:rgba(234,215,170,.28); border-radius:9px; background:#321925; box-shadow:none; }
+.collection .media-placeholder--model { height:100%; aspect-ratio:auto; }
+.collection .media-placeholder--model::after { content:""; position:absolute; inset:40% 0 0; background:linear-gradient(transparent,rgba(15,7,11,.95)); }
+.collection .model-card > div:last-child { position:absolute; z-index:2; right:0; bottom:0; left:0; padding:50px 14px 13px; text-align:left; }
+.collection .model-card > div:last-child small { color:var(--gold-light); font-size:8px; font-weight:800; letter-spacing:.12em; }
+.collection .model-card h3 { margin:3px 0 2px; color:#fff; font-family:var(--sans); font-size:13px; font-weight:800; line-height:1.1; text-transform:uppercase; }
+.collection .model-card p { margin:0; color:rgba(255,255,255,.72); font-size:8px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+.collection__note { margin:22px 0 0; color:rgba(255,255,255,.62); font-size:10px; text-align:center; }
+.collection__note strong { color:var(--gold-light); }
+.collection-benefits { max-width:760px; margin:42px auto 0; padding-top:34px; border-top:1px solid rgba(234,215,170,.34); }
+.collection-benefits h3 { margin:0 0 20px; color:var(--gold-light); font-family:var(--sans); font-size:23px; text-align:center; }
+.collection-benefits ul { display:grid; gap:14px; margin:0; padding:0; list-style:none; }
+.collection-benefits li { display:grid; grid-template-columns:16px 1fr; gap:8px; align-items:start; }
+.collection-benefits li > span { color:#c35d78; font-size:9px; line-height:1.9; }
+.collection-benefits p { margin:0; color:rgba(255,255,255,.7); font-size:11px; line-height:1.6; }
+.collection-benefits strong { color:#fff; }
 
 .method { position:relative; overflow:hidden; color:#fff; background:radial-gradient(circle at 15% 16%,rgba(189,148,89,.17),transparent 30%),linear-gradient(145deg,#2e111e,#5a1b36); }
 .method::after { content:""; position:absolute; inset:0; opacity:.055; pointer-events:none; background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 1px,transparent 14px); }
@@ -182,11 +214,22 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .checklist li > span { flex:0 0 19px; display:grid; width:19px; height:19px; place-items:center; color:#fff; border-radius:50%; background:var(--sage); font-size:8px; }
 .checklist p { margin:0; color:var(--muted); font-size:11px; }
 .checklist strong { color:var(--ink); }
-.purchase-card__price { display:flex; align-items:end; justify-content:space-between; gap:20px; padding:15px 0 20px; }
+.purchase-card__price { display:flex; flex-wrap:wrap; align-items:end; justify-content:space-between; gap:12px 20px; padding:15px 0 18px; }
 .purchase-card__price > div { display:grid; }
 .purchase-card__price small { color:var(--muted); font-size:7px; font-weight:800; letter-spacing:.13em; }
 .purchase-card__price del { color:var(--muted); font-size:15px; }
 .purchase-card__price strong { color:var(--wine); font-family:var(--serif); font-size:48px; line-height:.9; }
+.discount-badge { padding:7px 10px; color:#68461d; border:1px solid #d8ad55; border-radius:999px; background:#fff6d8; font-size:7px; font-weight:800; letter-spacing:.06em; }
+.countdown-box { margin:0 0 13px; padding:12px; border:1px solid #dbb75d; border-radius:11px; background:#fff9e9; }
+.countdown-box[hidden] { display:none; }
+.countdown-box > div:first-child { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+.countdown-box__icon { display:grid; flex:0 0 28px; width:28px; height:28px; place-items:center; color:#fff; border-radius:8px; background:var(--wine); box-shadow:0 6px 14px rgba(104,31,61,.18); font-size:15px; }
+.countdown-box p { margin:0; color:#4f3b33; font-size:9px; }
+.countdown-box p strong { color:#201719; }
+.countdown { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; }
+.countdown > div { display:grid; min-height:46px; place-items:center; padding:6px 3px; border:1px solid #dfbf71; border-radius:7px; background:#fff; }
+.countdown strong { color:var(--wine); font-family:var(--sans); font-size:18px; line-height:1; }
+.countdown small { color:#8a745f; font-size:6px; font-weight:800; letter-spacing:.08em; }
 .button { display:flex; min-height:58px; align-items:center; justify-content:center; gap:14px; width:100%; padding:15px 20px; border:0; text-align:center; text-decoration:none; font-size:11px; font-weight:800; letter-spacing:.035em; transition:transform .18s ease,box-shadow .18s ease; }
 .button:hover { transform:translateY(-2px); }
 .button--primary { color:#fff; background:linear-gradient(135deg,#7b294b,#581a35); box-shadow:0 13px 29px rgba(104,31,61,.25); }
@@ -211,6 +254,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .bonus-card__body > small { margin-top:auto; color:var(--wine); font-size:9px; font-weight:700; }
 
 .summary { background:var(--ivory); }
+.last-chance { width:min(calc(100% - 28px),560px); margin:-66px auto 54px; padding:11px 16px; color:#fff4dc; border-radius:3px; background:var(--wine-deep); font-size:8px; font-weight:800; letter-spacing:.1em; text-align:center; }
 .summary__grid { display:grid; grid-template-columns:.88fr 1.12fr; gap:75px; align-items:center; }
 .summary__copy > p { color:var(--muted); font-size:13px; }
 .summary-card { overflow:hidden; border:1px solid rgba(104,31,61,.22); background:#fff; box-shadow:var(--shadow); }
@@ -228,6 +272,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .summary-card__today small { font-size:8px; font-weight:800; letter-spacing:.13em; }
 .summary-card__today strong { color:var(--wine); font-family:var(--serif); font-size:51px; line-height:.9; }
 .summary-card__today span { color:var(--muted); font-size:8px; }
+.countdown-box--summary { margin:16px 28px 0; }
 .summary-card > .button { width:calc(100% - 56px); margin:18px 28px 0; }
 .mini-guarantee { display:flex; gap:12px; margin:20px 28px 28px; padding:13px; background:#edf1ea; }
 .mini-guarantee > span { flex:0 0 34px; display:grid; width:34px; height:34px; place-items:center; color:#fff; border-radius:50%; background:var(--sage); font-family:var(--serif); font-size:20px; }
@@ -241,6 +286,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .guarantee__seal span { margin-top:8px; font-size:8px; font-weight:800; letter-spacing:.14em; }
 .guarantee h2 { margin-bottom:8px; font-size:40px; }
 .guarantee p { margin:0; color:var(--muted); font-size:12px; }
+.guarantee__risk { display:block; margin-top:12px; color:#466146; font-size:11px; }
 
 .faq { background:var(--cream); }
 .faq__list { display:grid; gap:9px; }
@@ -319,12 +365,17 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
   .section-title > p:last-child { font-size:11px; }
   .carousel--three,.carousel--four { grid-auto-columns:86%; gap:12px; }
   .carousel-button { display:none; }
-  .story-card__body { min-height:190px; }
+  .story-card__body { min-height:240px; }
+  .social-proof .carousel { grid-auto-columns:86%; }
   .problem__list article { grid-template-columns:48px 1fr; }
   .problem__list article > span { min-height:100%; font-size:18px; }
   .problem__list p { padding:17px; font-size:12px; }
   .reframe { margin-top:30px; padding:26px 18px; }
   .reframe h3 { font-size:25px; }
+  .collection .carousel { grid-auto-columns:78vw; }
+  .collection-benefits { margin-top:34px; padding-top:28px; }
+  .collection-benefits h3 { font-size:21px; }
+  .collection-benefits p { font-size:10px; }
   .method__grid { gap:32px; }
   .method h2 { font-size:46px; }
   .method__steps article { padding:17px; }
@@ -337,6 +388,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
   .purchase-card { padding:27px 19px; }
   .purchase-card h3 { font-size:37px; }
   .purchase-card__price strong { font-size:43px; }
+  .discount-badge { width:100%; text-align:center; }
   .bonus-card,.bonus-card--reverse { grid-template-columns:1fr; }
   .bonus-card--reverse .media-placeholder,.bonus-card--reverse .bonus-card__body { grid-column:auto; grid-row:auto; }
   .media-placeholder--bonus { aspect-ratio:1/.75; }
@@ -346,8 +398,10 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
   .summary-card h3 { margin-inline:18px; }
   .summary-card > ul { padding-inline:18px; }
   .summary-card__value { margin-inline:18px; }
+  .countdown-box--summary { margin-inline:18px; }
   .summary-card > .button { width:calc(100% - 36px); margin-inline:18px; }
   .mini-guarantee { margin-inline:18px; }
+  .last-chance { margin-top:-47px; margin-bottom:38px; font-size:7px; }
   .guarantee__inner { grid-template-columns:1fr; justify-items:center; text-align:center; }
   .guarantee h2 { font-size:35px; }
   .closing { padding:76px 0; }
@@ -436,10 +490,15 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 
       <section class="section social-proof" id="experiencias">
         <div class="shell">
-          <div class="section-title section-title--center reveal">
-            <span class="kicker">RESULTADOS REALES</span>
-            <h2>Cuando un patrón claro se encuentra con unas manos creativas</h2>
-            <p>Reemplaza estas tarjetas con experiencias verificadas y fotografías autorizadas de los bolsos terminados.</p>
+          <div class="section-title section-title--center proof-heading reveal">
+            <h2>
+              Trabajos reales de
+              <mark>alumnas que ya están creando bolsos con acabado de boutique</mark>
+            </h2>
+            <p>
+              Tejedoras con distintos niveles de experiencia están convirtiendo hilos y puntos en
+              <strong>piezas que pueden usar, regalar o sumar a su catálogo.</strong>
+            </p>
           </div>
 
           <div class="carousel-shell reveal">
@@ -447,15 +506,19 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
             <div class="carousel carousel--three" data-carousel="stories">
               <article class="story-card">
                 <div class="media-placeholder media-placeholder--story"><span class="media-placeholder__index">02</span><div class="media-placeholder__copy"><small>FOTO REAL</small><strong>ALUMNA + BOLSO</strong><em>900 × 900 px</em></div></div>
-                <div class="story-card__body"><span class="rating">★★★★★</span><blockquote>“[Testimonio real sobre lo sencillo que fue seguir el patrón y terminar la pieza.]”</blockquote><strong>[Nombre real]</strong><small>[Nivel o ciudad]</small></div>
+                <div class="story-card__body"><span class="rating">★★★★★</span><div class="story-card__identity"><strong>[Nombre real]</strong><small>[PRINCIPIANTE / CIUDAD]</small></div><blockquote>“[Testimonio real: qué le costaba antes, qué patrón eligió y qué cambió al terminar su primer bolso.]”</blockquote></div>
               </article>
               <article class="story-card">
                 <div class="media-placeholder media-placeholder--story"><span class="media-placeholder__index">03</span><div class="media-placeholder__copy"><small>FOTO ORGÁNICA</small><strong>DETALLE DEL ACABADO</strong><em>900 × 900 px</em></div></div>
-                <div class="story-card__body"><span class="rating">★★★★★</span><blockquote>“[Testimonio real que responda: ‘no soy experta’ o ‘siempre me pierdo’.]”</blockquote><strong>[Nombre real]</strong><small>[Nivel al comenzar]</small></div>
+                <div class="story-card__body"><span class="rating">★★★★★</span><div class="story-card__identity"><strong>[Nombre real]</strong><small>[TEJEDORA AFICIONADA]</small></div><blockquote>“[Testimonio real: cómo mejoró la estructura, el forro o las terminaciones de su bolso.]”</blockquote></div>
               </article>
               <article class="story-card">
                 <div class="media-placeholder media-placeholder--story"><span class="media-placeholder__index">04</span><div class="media-placeholder__copy"><small>FOTO REAL</small><strong>BOLSO PUBLICADO O VENDIDO</strong><em>900 × 900 px</em></div></div>
-                <div class="story-card__body"><span class="rating">★★★★★</span><blockquote>“[Testimonio real sobre usar, regalar o vender uno de los modelos.]”</blockquote><strong>[Nombre real]</strong><small>[Aficionada o emprendedora]</small></div>
+                <div class="story-card__body"><span class="rating">★★★★★</span><div class="story-card__identity"><strong>[Nombre real]</strong><small>[EMPRENDEDORA]</small></div><blockquote>“[Testimonio real: reacción que recibió al publicar el bolso, regalarlo o ponerlo a la venta.]”</blockquote></div>
+              </article>
+              <article class="story-card">
+                <div class="media-placeholder media-placeholder--story"><span class="media-placeholder__index">05</span><div class="media-placeholder__copy"><small>FOTO CASERA</small><strong>ALUMNA CON SU CREACIÓN</strong><em>900 × 900 px</em></div></div>
+                <div class="story-card__body"><span class="rating">★★★★★</span><div class="story-card__identity"><strong>[Nombre real]</strong><small>[NIVEL O CIUDAD]</small></div><blockquote>“[Testimonio real: el momento en que dejó de guardar ideas y consiguió terminar una pieza completa.]”</blockquote></div>
               </article>
             </div>
             <button class="carousel-button carousel-button--next" data-next="stories" aria-label="Ver más experiencias">›</button>
@@ -487,26 +550,38 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 
       <section class="section collection" id="coleccion">
         <div class="shell">
-          <div class="section-title section-title--center reveal">
-            <span class="kicker">MODELOS INCLUIDOS</span>
-            <h2>Una colección que parece diseñada para una vitrina</h2>
-            <p>Usa fotografías editoriales consistentes: luz suave, fondos neutros y detalles cercanos de la textura.</p>
+          <div class="section-title section-title--center collection-heading reveal">
+            <h2>Esto es lo que vas a poder <span>tejer, mostrar y convertir en tu propia colección:</span></h2>
+            <p>
+              Modelos para diferentes estilos y ocasiones:
+              <strong>totes, bandoleras, bolsos de mano, mini bags</strong> y muchas opciones más.
+            </p>
           </div>
 
           <div class="carousel-shell reveal">
             <button class="carousel-button carousel-button--prev" data-prev="models" aria-label="Ver modelos anteriores">‹</button>
             <div class="carousel carousel--four" data-carousel="models">
-              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">05</span><div class="media-placeholder__copy"><small>MODELO 01</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 01</small><h3>El bolso protagonista</h3><p>Textura, estructura y una silueta que atrae la mirada.</p></div></article>
-              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">06</span><div class="media-placeholder__copy"><small>MODELO 02</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 02</small><h3>La pieza de todos los días</h3><p>Funcional sin renunciar a una apariencia cuidada.</p></div></article>
-              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">07</span><div class="media-placeholder__copy"><small>MODELO 03</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 03</small><h3>El detalle que se regala</h3><p>Una pieza personal que se siente pensada para alguien.</p></div></article>
-              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">08</span><div class="media-placeholder__copy"><small>MODELO 04</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 04</small><h3>El favorito del catálogo</h3><p>Un diseño que comunica valor antes de hablar del precio.</p></div></article>
-              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">09</span><div class="media-placeholder__copy"><small>MODELO 05</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 05</small><h3>La silueta compacta</h3><p>Menos tamaño. La misma presencia y atención al detalle.</p></div></article>
-              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">10</span><div class="media-placeholder__copy"><small>MODELO 06</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 06</small><h3>El diseño de ocasión</h3><p>Una pieza especial que completa el look y no lo acompaña en silencio.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">06</span><div class="media-placeholder__copy"><small>MODELO 01</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 01</small><h3>El bolso protagonista</h3><p>Textura, estructura y una silueta que atrae la mirada.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">07</span><div class="media-placeholder__copy"><small>MODELO 02</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 02</small><h3>La pieza de todos los días</h3><p>Funcional sin renunciar a una apariencia cuidada.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">08</span><div class="media-placeholder__copy"><small>MODELO 03</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 03</small><h3>El detalle que se regala</h3><p>Una pieza personal que se siente pensada para alguien.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">09</span><div class="media-placeholder__copy"><small>MODELO 04</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 04</small><h3>El favorito del catálogo</h3><p>Un diseño que comunica valor antes de hablar del precio.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">10</span><div class="media-placeholder__copy"><small>MODELO 05</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 05</small><h3>La silueta compacta</h3><p>Menos tamaño. La misma presencia y atención al detalle.</p></div></article>
+              <article class="model-card"><div class="media-placeholder media-placeholder--model"><span class="media-placeholder__index">11</span><div class="media-placeholder__copy"><small>MODELO 06</small><strong>EDITORIAL</strong><em>900 × 1200 px</em></div></div><div><small>COLECCIÓN 06</small><h3>El diseño de ocasión</h3><p>Una pieza especial que completa el look y no lo acompaña en silencio.</p></div></article>
             </div>
             <button class="carousel-button carousel-button--next" data-next="models" aria-label="Ver más modelos">›</button>
           </div>
 
           <p class="collection__note reveal"><strong>Y estos son solo algunos.</strong> Dentro encontrarás más de 80 posibilidades para crear según tu estilo, nivel y ocasión.</p>
+
+          <div class="collection-benefits reveal">
+            <h3>Con estos patrones vas a:</h3>
+            <ul>
+              <li><span>◆</span><p><strong>Dejar de depender de tutoriales incompletos</strong> — tendrás una colección organizada para elegir el siguiente proyecto sin empezar otra búsqueda interminable.</p></li>
+              <li><span>◆</span><p><strong>Crear bolsos con mayor presencia</strong> — diseños pensados para que la textura, la forma y los detalles se sientan parte de una misma pieza.</p></li>
+              <li><span>◆</span><p><strong>Construir un catálogo que no se vea repetido</strong> — más variedad para ofrecer opciones sin terminar tejiendo siempre el mismo modelo.</p></li>
+              <li><span>◆</span><p><strong>Tejer para usar, regalar o vender</strong> — eliges el propósito de cada pieza antes de comenzar y avanzas con un resultado claro en mente.</p></li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -531,8 +606,8 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
       <section class="section outcomes" id="resultados">
         <div class="shell outcomes__grid">
           <div class="outcomes__media reveal">
-            <!-- IMAGEN 11 · 1000x1250 px -->
-            <div class="media-placeholder media-placeholder--portrait"><span class="media-placeholder__index">11</span><div class="media-placeholder__copy"><small>FOTO DE MODA</small><strong>MUJER CON BOLSO TERMINADO</strong><p>Escena urbana o interior editorial</p><em>1000 × 1250 px</em></div></div>
+            <!-- IMAGEN 12 · 1000x1250 px -->
+            <div class="media-placeholder media-placeholder--portrait"><span class="media-placeholder__index">12</span><div class="media-placeholder__copy"><small>FOTO DE MODA</small><strong>MUJER CON BOLSO TERMINADO</strong><p>Escena urbana o interior editorial</p><em>1000 × 1250 px</em></div></div>
           </div>
           <div class="outcomes__copy reveal">
             <span class="kicker">¿QUÉ CAMBIA PARA TI?</span>
@@ -557,8 +632,8 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 
           <div class="offer__grid reveal">
             <div class="offer__media">
-              <!-- IMAGEN 12 · 1200x1200 px -->
-              <div class="media-placeholder media-placeholder--pack"><span class="media-placeholder__index">12</span><div class="media-placeholder__copy"><small>MOCKUP PRINCIPAL</small><strong>BOLSOS DE AUTOR™</strong><p>Tablet + patrones + materiales + piezas terminadas</p><em>1200 × 1200 px</em></div></div>
+              <!-- IMAGEN 13 · 1200x1200 px -->
+              <div class="media-placeholder media-placeholder--pack"><span class="media-placeholder__index">13</span><div class="media-placeholder__copy"><small>MOCKUP PRINCIPAL</small><strong>BOLSOS DE AUTOR™</strong><p>Tablet + patrones + materiales + piezas terminadas</p><em>1200 × 1200 px</em></div></div>
               <div class="offer__seal"><strong>80+</strong><span>patrones<br />premium</span></div>
             </div>
 
@@ -577,10 +652,21 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
               <div class="purchase-card__price">
                 <div><small>VALOR DE REFERENCIA</small><del>USD 67</del></div>
                 <div><small>HOY, PAGO ÚNICO</small><strong>USD 15</strong></div>
+                <span class="discount-badge">78% OFF · LANZAMIENTO</span>
               </div>
 
-              <a class="button button--primary" data-checkout href="#resumen">QUIERO LA COLECCIÓN COMPLETA <span>→</span></a>
-              <p class="button-note">Compra segura · Acceso por correo · 7 días de garantía</p>
+              <div class="countdown-box" data-countdown-box hidden>
+                <div><span class="countdown-box__icon" aria-hidden="true">◷</span><p>Esta oferta de lanzamiento termina en:</p></div>
+                <div class="countdown" data-countdown aria-label="Tiempo restante">
+                  <div><strong data-days>00</strong><small>DÍAS</small></div>
+                  <div><strong data-hours>00</strong><small>HORAS</small></div>
+                  <div><strong data-minutes>00</strong><small>MIN</small></div>
+                  <div><strong data-seconds>00</strong><small>SEG</small></div>
+                </div>
+              </div>
+
+              <a class="button button--primary" data-checkout href="#resumen">QUIERO LA COLECCIÓN CON 30 DÍAS DE GARANTÍA <span>→</span></a>
+              <p class="button-note">Acceso inmediato por correo · Pago único<br />Compra protegida · 30 días de garantía</p>
             </article>
           </div>
         </div>
@@ -595,26 +681,27 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
           </div>
 
           <div class="bonus-list">
-            <article class="bonus-card reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">13</span><div class="media-placeholder__copy"><small>BONO 01</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #1</span><strong>INCLUIDO</strong></div><h3>Mapa Empieza por Aquí™</h3><p>Una selección inicial para que más de 80 opciones no se conviertan en más de 80 dudas.</p><ul><li>Proyectos recomendados para comenzar</li><li>Ruta según nivel</li><li>Primera decisión resuelta</li></ul><small>Valor de referencia: USD 9</small></div></article>
-            <article class="bonus-card bonus-card--reverse reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">14</span><div class="media-placeholder__copy"><small>BONO 02</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #2</span><strong>INCLUIDO</strong></div><h3>Acabados de Boutique™</h3><p>Los detalles que hacen que una pieza se vea terminada y no simplemente tejida.</p><ul><li>Estructura y forma</li><li>Asas, bordes y cierres</li><li>Terminaciones más limpias</li></ul><small>Valor de referencia: USD 17</small></div></article>
-            <article class="bonus-card reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">15</span><div class="media-placeholder__copy"><small>BONO 03</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #3</span><strong>INCLUIDO</strong></div><h3>Mapa de Materiales sin Errores™</h3><p>Una guía de consulta para elegir hilo, aguja y accesorios según el resultado que deseas.</p><ul><li>Menos compras equivocadas</li><li>Mejor relación entre material y diseño</li><li>Decisiones más rápidas</li></ul><small>Valor de referencia: USD 15</small></div></article>
-            <article class="bonus-card bonus-card--reverse reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">16</span><div class="media-placeholder__copy"><small>BONO 04</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #4</span><strong>INCLUIDO</strong></div><h3>Precio sin Regalar tu Trabajo™</h3><p>Una plantilla para sumar materiales, tiempo y margen antes de ponerle precio a tu pieza.</p><ul><li>Evita cobrar solo los materiales</li><li>Visualiza el margen</li><li>Cotiza con mayor criterio</li></ul><small>Valor de referencia: USD 19</small></div></article>
-            <article class="bonus-card reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">17</span><div class="media-placeholder__copy"><small>BONO 05</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #5</span><strong>INCLUIDO</strong></div><h3>Fotos que Despiertan Deseo™</h3><p>Una mini guía para fotografiar tus bolsos con celular y mostrarlos de manera más atractiva.</p><ul><li>Fondos sencillos</li><li>Ángulos que favorecen la pieza</li><li>Una imagen más consistente</li></ul><small>Valor de referencia: USD 14</small></div></article>
+            <article class="bonus-card reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">14</span><div class="media-placeholder__copy"><small>BONO 01</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #1</span><strong>INCLUIDO</strong></div><h3>Mapa Empieza por Aquí™</h3><p>Una selección inicial para que más de 80 opciones no se conviertan en más de 80 dudas.</p><ul><li>Proyectos recomendados para comenzar</li><li>Ruta según nivel</li><li>Primera decisión resuelta</li></ul><small>Valor de referencia: USD 9</small></div></article>
+            <article class="bonus-card bonus-card--reverse reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">15</span><div class="media-placeholder__copy"><small>BONO 02</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #2</span><strong>INCLUIDO</strong></div><h3>Acabados de Boutique™</h3><p>Los detalles que hacen que una pieza se vea terminada y no simplemente tejida.</p><ul><li>Estructura y forma</li><li>Asas, bordes y cierres</li><li>Terminaciones más limpias</li></ul><small>Valor de referencia: USD 17</small></div></article>
+            <article class="bonus-card reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">16</span><div class="media-placeholder__copy"><small>BONO 03</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #3</span><strong>INCLUIDO</strong></div><h3>Mapa de Materiales sin Errores™</h3><p>Una guía de consulta para elegir hilo, aguja y accesorios según el resultado que deseas.</p><ul><li>Menos compras equivocadas</li><li>Mejor relación entre material y diseño</li><li>Decisiones más rápidas</li></ul><small>Valor de referencia: USD 15</small></div></article>
+            <article class="bonus-card bonus-card--reverse reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">17</span><div class="media-placeholder__copy"><small>BONO 04</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #4</span><strong>INCLUIDO</strong></div><h3>Precio sin Regalar tu Trabajo™</h3><p>Una plantilla para sumar materiales, tiempo y margen antes de ponerle precio a tu pieza.</p><ul><li>Evita cobrar solo los materiales</li><li>Visualiza el margen</li><li>Cotiza con mayor criterio</li></ul><small>Valor de referencia: USD 19</small></div></article>
+            <article class="bonus-card reveal"><div class="media-placeholder media-placeholder--bonus"><span class="media-placeholder__index">18</span><div class="media-placeholder__copy"><small>BONO 05</small><strong>MOCKUP PREMIUM</strong><em>900 × 900 px</em></div></div><div class="bonus-card__body"><div class="bonus-card__top"><span>BONO #5</span><strong>INCLUIDO</strong></div><h3>Fotos que Despiertan Deseo™</h3><p>Una mini guía para fotografiar tus bolsos con celular y mostrarlos de manera más atractiva.</p><ul><li>Fondos sencillos</li><li>Ángulos que favorecen la pieza</li><li>Una imagen más consistente</li></ul><small>Valor de referencia: USD 14</small></div></article>
           </div>
         </div>
       </section>
 
       <section class="section summary" id="resumen">
+        <div class="last-chance reveal">◆ ÚLTIMA OPORTUNIDAD PARA OBTENER LOS 5 BONOS INCLUIDOS EN EL LANZAMIENTO</div>
         <div class="shell summary__grid">
           <div class="summary__copy reveal">
             <span class="kicker">RESUMEN DE TU PEDIDO</span>
             <h2>Tu próxima colección puede empezar con un solo patrón.</h2>
             <p>Pero esta vez no tendrás que buscarlo, reconstruirlo ni preguntarte qué hacer después.</p>
-            <div class="media-placeholder media-placeholder--landscape"><span class="media-placeholder__index">18</span><div class="media-placeholder__copy"><small>IMAGEN FINAL</small><strong>VARIOS BOLSOS EN UNA ESCENA EDITORIAL</strong><em>1400 × 900 px</em></div></div>
+            <div class="media-placeholder media-placeholder--landscape"><span class="media-placeholder__index">19</span><div class="media-placeholder__copy"><small>IMAGEN FINAL</small><strong>VARIOS BOLSOS EN UNA ESCENA EDITORIAL</strong><em>1400 × 900 px</em></div></div>
           </div>
 
           <aside class="summary-card reveal">
-            <div class="summary-card__bar">BOLSOS DE AUTOR™ · COLECCIÓN COMPLETA</div>
+            <div class="summary-card__bar">◆ OFERTA DE LANZAMIENTO · INCLUYE LOS 5 BONOS</div>
             <h3>Esto es todo lo que recibes</h3>
             <ul>
               <li><span>✓</span><div><strong>Más de 80 patrones premium</strong><small>Colección principal</small></div><b>USD 67</b></li>
@@ -625,18 +712,27 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
               <li><span>✓</span><div><strong>Fotos que Despiertan Deseo™</strong><small>Bono 5</small></div><b>USD 14</b></li>
             </ul>
             <div class="summary-card__value"><span>VALOR DE REFERENCIA</span><del>USD 141</del></div>
-            <div class="summary-card__today"><small>HOY SOLO</small><strong>USD 15</strong><span>Pago único · Sin mensualidades</span></div>
-            <a class="button button--primary" data-checkout href="#resumen">SÍ, QUIERO EMPEZAR AHORA <span>→</span></a>
+            <div class="summary-card__today"><small>HOY SOLO</small><strong>USD 15</strong><span>89% OFF sobre el valor total · Pago único</span></div>
+            <div class="countdown-box countdown-box--summary" data-countdown-box hidden>
+              <div><span class="countdown-box__icon" aria-hidden="true">◷</span><p>El precio de lanzamiento termina en:</p></div>
+              <div class="countdown" data-countdown aria-label="Tiempo restante">
+                <div><strong data-days>00</strong><small>DÍAS</small></div>
+                <div><strong data-hours>00</strong><small>HORAS</small></div>
+                <div><strong data-minutes>00</strong><small>MIN</small></div>
+                <div><strong data-seconds>00</strong><small>SEG</small></div>
+              </div>
+            </div>
+            <a class="button button--primary" data-checkout href="#resumen">QUIERO ACCEDER CON 30 DÍAS DE GARANTÍA <span>→</span></a>
             <p class="button-note">Acceso digital por correo · Compra protegida</p>
-            <div class="mini-guarantee"><span>7</span><p><strong>Días para decidir</strong>Explora el contenido. Si no es para ti, solicita el reembolso dentro del plazo indicado.</p></div>
+            <div class="mini-guarantee"><span>30</span><p><strong>30 días completos para decidir</strong>Explora la colección y empieza tu primer proyecto. Si no es para ti, solicita el reembolso dentro del plazo indicado.</p></div>
           </aside>
         </div>
       </section>
 
       <section class="guarantee section">
         <div class="shell shell--narrow guarantee__inner reveal">
-          <div class="guarantee__seal"><strong>7</strong><span>DÍAS</span></div>
-          <div><span class="kicker">GARANTÍA SIN COMPLICACIONES</span><h2>Primero mira la colección. Después decides.</h2><p>Entra, revisa el contenido y confirma si es lo que esperabas. Si durante los primeros 7 días consideras que no es para ti, puedes solicitar la devolución según las condiciones de la plataforma.</p></div>
+          <div class="guarantee__seal"><strong>30</strong><span>DÍAS</span></div>
+          <div><span class="kicker">GARANTÍA TOTAL DE 30 DÍAS</span><h2>Primero mira la colección. Después decides.</h2><p>Tienes 30 días completos para revisar los patrones, explorar los recursos y comenzar tu primer proyecto. Si consideras que no es para ti, puedes solicitar la devolución del 100% de tu compra según las condiciones de la plataforma.</p><strong class="guarantee__risk">El riesgo de probar la colección no recae sobre ti.</strong></div>
         </div>
       </section>
 
@@ -649,7 +745,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
             <details><summary>¿Puedo vender los bolsos que yo misma teja?</summary><p>Puedes vender las piezas terminadas que tú produzcas, siempre que la licencia final del producto lo permita. Los patrones no pueden copiarse, compartirse ni revenderse.</p></details>
             <details><summary>¿El pago es mensual?</summary><p>No. Realizas un solo pago para acceder al contenido incluido en esta oferta.</p></details>
             <details><summary>¿Qué materiales necesito?</summary><p>Dependerá del diseño seleccionado. Consulta los materiales indicados en cada patrón antes de comenzar el proyecto.</p></details>
-            <details><summary>¿Cómo funciona la garantía?</summary><p>Tienes 7 días desde la compra para solicitar la devolución, de acuerdo con las condiciones de la plataforma de pago.</p></details>
+            <details><summary>¿Cómo funciona la garantía?</summary><p>Tienes 30 días desde la compra para solicitar la devolución del 100% de tu pago, de acuerdo con las condiciones de la plataforma.</p></details>
           </div>
         </div>
       </section>
@@ -661,7 +757,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
           <h2>No necesitas guardar otro bolso en inspiración.<br /><em>Necesitas elegir uno y empezar a tejerlo.</em></h2>
           <p>Más de 80 diseños te esperan dentro de una colección organizada para que esta vez la idea no se quede en la pantalla.</p>
           <a class="button button--light" data-checkout href="#resumen">QUIERO MIS PATRONES PREMIUM <span>→</span></a>
-          <small>USD 15 · Pago único · Acceso digital · Garantía de 7 días</small>
+          <small>USD 15 · Pago único · Acceso digital · Garantía de 30 días</small>
         </div>
       </section>
     </main>
@@ -682,9 +778,46 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 // REEMPLAZA únicamente esta URL antes de publicar.
 const CHECKOUT_URL = "https://pay.hotmart.com/TU-CHECKOUT";
 
+// Escribe aquí una fecha real de cierre con zona horaria de Colombia.
+// Ejemplo: "2026-08-31T23:59:59-05:00"
+// Si queda vacío, los contadores permanecen ocultos y no se crea urgencia falsa.
+const OFFER_DEADLINE = "";
+
 document.querySelectorAll("[data-checkout]").forEach((link) => {
   link.href = CHECKOUT_URL;
 });
+
+const countdownBoxes = document.querySelectorAll("[data-countdown-box]");
+const deadline = new Date(OFFER_DEADLINE).getTime();
+
+if (OFFER_DEADLINE && Number.isFinite(deadline) && deadline > Date.now()) {
+  countdownBoxes.forEach((box) => { box.hidden = false; });
+  let countdownTimer;
+
+  const updateCountdown = () => {
+    const remaining = Math.max(0, deadline - Date.now());
+    const days = Math.floor(remaining / 86_400_000);
+    const hours = Math.floor((remaining % 86_400_000) / 3_600_000);
+    const minutes = Math.floor((remaining % 3_600_000) / 60_000);
+    const seconds = Math.floor((remaining % 60_000) / 1_000);
+    const values = { days, hours, minutes, seconds };
+
+    countdownBoxes.forEach((box) => {
+      Object.entries(values).forEach(([unit, value]) => {
+        const field = box.querySelector(`[data-${unit}]`);
+        if (field) field.textContent = String(value).padStart(2, "0");
+      });
+    });
+
+    if (remaining === 0) {
+      clearInterval(countdownTimer);
+      countdownBoxes.forEach((box) => { box.hidden = true; });
+    }
+  };
+
+  updateCountdown();
+  countdownTimer = setInterval(updateCountdown, 1_000);
+}
 
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const name = carousel.dataset.carousel;
