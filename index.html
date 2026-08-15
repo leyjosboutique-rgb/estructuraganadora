@@ -154,7 +154,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .collection-heading h2 span { color:var(--gold-light); }
 .collection-heading > p:last-child { color:rgba(255,255,255,.72); font-size:11px; line-height:1.65; }
 .collection-heading > p:last-child strong { color:#fff; }
-.collection .carousel-shell { width:min(100vw,1500px); margin-left:50%; padding-inline:12px; transform:translateX(-50%); }
+.collection .carousel-shell { position:relative; left:50%; width:min(100vw,1500px); margin-left:-50vw; padding-inline:12px; transform:none; }
 .collection .carousel { grid-auto-columns:255px; gap:12px; padding-bottom:8px; }
 .collection .carousel-button { display:none; }
 .collection .model-card { position:relative; min-height:320px; border-color:rgba(234,215,174,.38); border-radius:2px; background:#6d2942; box-shadow:none; }
@@ -166,6 +166,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
 .collection .model-card p { margin:0; color:rgba(255,255,255,.72); font-size:8px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
 .collection__note { margin:22px 0 0; color:rgba(255,255,255,.62); font-size:10px; text-align:center; }
 .collection__note strong { color:var(--gold-light); }
+.collection__swipe { display:none; }
 .collection-benefits { max-width:760px; margin:42px auto 0; padding-top:34px; border-top:1px solid rgba(234,215,170,.34); }
 .collection-benefits h3 { margin:0 0 20px; color:var(--gold-light); font-family:var(--serif); font-size:28px; font-weight:600; text-align:center; }
 .collection-benefits ul { display:grid; gap:14px; margin:0; padding:0; list-style:none; }
@@ -376,7 +377,16 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
   .problem__list p { padding:17px; font-size:12px; }
   .reframe { margin-top:30px; padding:26px 18px; }
   .reframe h3 { font-size:25px; }
-  .collection .carousel { grid-auto-columns:78vw; }
+  .collection .carousel-shell { left:50%; width:100vw; margin-left:-50vw; padding-inline:0; }
+  .collection .carousel { grid-auto-columns:86vw; gap:12px; padding:3px 7vw 14px; scroll-padding-inline:7vw; scrollbar-width:thin; scrollbar-color:rgba(234,215,174,.72) rgba(255,255,255,.1); }
+  .collection .carousel::-webkit-scrollbar { display:block; height:4px; }
+  .collection .carousel::-webkit-scrollbar-track { background:rgba(255,255,255,.1); }
+  .collection .carousel::-webkit-scrollbar-thumb { border-radius:999px; background:rgba(234,215,174,.72); }
+  .collection .model-card { min-height:430px; scroll-snap-align:center; }
+  .collection .model-card h3 { font-size:20px; }
+  .collection .model-card p { font-size:9px; line-height:1.45; }
+  .collection__swipe { display:block; margin:10px 0 0; color:var(--gold-light); font-size:9px; font-weight:700; letter-spacing:.12em; text-align:center; }
+  .collection__swipe span { font-size:14px; }
   .collection-benefits { margin-top:34px; padding-top:28px; }
   .collection-benefits h3 { font-size:21px; }
   .collection-benefits p { font-size:10px; }
@@ -620,6 +630,8 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
             </div>
             <button class="carousel-button carousel-button--next" data-next="models" aria-label="Ver más modelos">›</button>
           </div>
+
+          <p class="collection__swipe" aria-hidden="true">DESLIZA PARA VER MÁS MODELOS <span>→</span></p>
 
           <p class="collection__note reveal"><strong>Y estos son solo algunos.</strong> Dentro encontrarás más de 80 posibilidades para crear según tu estilo, nivel y ocasión.</p>
 
