@@ -2,31 +2,25 @@ const CHECKOUT_URL = "https://pay.hotmart.com/L107141993A?checkoutMode=10";
 
 document.querySelectorAll("[data-checkout]").forEach((link) => {
   link.href = CHECKOUT_URL;
+  link.addEventListener("click", () => {
+    if (typeof window.fbq !== "function") return;
+    window.fbq("track", "InitiateCheckout", {
+      content_name: "Bolsos de Autor",
+      content_category: "Patrones premium de crochet",
+      content_type: "product",
+      value: 13.00,
+      currency: "USD",
+    });
+  });
 });
 
 const countdownBoxes = document.querySelectorAll("[data-countdown-box]");
 const todayFields = document.querySelectorAll("[data-today-date]");
 const dateFormatter = new Intl.DateTimeFormat("es-CO", { day: "numeric", month: "long", year: "numeric" });
 const TIMER_DURATION = 10 * 60 * 1_000;
-const TIMER_KEY = "bolsos-boutique-session-deadline";
 const formattedDate = dateFormatter.format(new Date());
 todayFields.forEach((field) => { field.textContent = formattedDate; });
-let savedDeadline;
-try {
-  savedDeadline = sessionStorage.getItem(TIMER_KEY);
-} catch {
-  savedDeadline = null;
-}
-
-let sessionDeadline = Number(savedDeadline);
-if (!Number.isFinite(sessionDeadline) || sessionDeadline <= 0) {
-  sessionDeadline = Date.now() + TIMER_DURATION;
-  try {
-    sessionStorage.setItem(TIMER_KEY, String(sessionDeadline));
-  } catch {
-    // El contador sigue funcionando aunque el navegador bloquee sessionStorage.
-  }
-}
+const sessionDeadline = Date.now() + TIMER_DURATION;
 
 const updateCountdown = () => {
   const now = new Date();
