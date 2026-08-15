@@ -45,7 +45,7 @@ const updateCountdown = () => {
     if (remaining === 0) {
       box.classList.add("is-expired");
       const message = box.querySelector("[data-countdown-message]");
-      if (message) message.textContent = "La reserva temporal de esta sesión finalizó.";
+      if (message) message.textContent = "La reserva temporal de esta sesi\u00f3n finaliz\u00f3.";
     }
   });
 };
